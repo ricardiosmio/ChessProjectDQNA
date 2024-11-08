@@ -125,7 +125,11 @@ class ChessGUI:
             print(f"Selected square: {self.selected_square}")
             print(f"Legal moves: {list(self.board.legal_moves)}")
         else:
-            if piece.piece_type == chess.PAWN and ((piece.color == chess.WHITE and chess.square_rank(square) == 7) or (piece.color == chess.BLACK and chess.square_rank(square) == 0)):
+            piece = self.board.piece_at(self.selected_square)  # Retrieve the piece at the selected square
+            if piece and piece.piece_type == chess.PAWN and (
+                (piece.color == chess.WHITE and chess.square_rank(square) == 7) or 
+                (piece.color == chess.BLACK and chess.square_rank(square) == 0)
+            ):
                 self.promote_pawn(self.selected_square, square)
             else:
                 move = chess.Move(self.selected_square, square)
@@ -142,6 +146,7 @@ class ChessGUI:
                     print("Illegal move, resetting selection")
 
             self.selected_square = None
+            self.update_board()
 
     def promote_pawn(self, from_square, to_square):
         x, y = self.root.winfo_pointerxy()
