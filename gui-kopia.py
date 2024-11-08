@@ -125,7 +125,7 @@ class ChessGUI:
             print(f"Selected square: {self.selected_square}")
             print(f"Legal moves: {list(self.board.legal_moves)}")
         else:
-            if piece.piece_type == chess.PAWN and ((piece.color == chess.WHITE and chess.square_rank(square) == 7) or (piece.color == chess.BLACK and chess.square_rank(square) == 0)):
+            if self.board.piece_at(self.selected_square).piece_type == chess.PAWN and chess.square_rank(square) in [0, 7]:
                 self.promote_pawn(self.selected_square, square)
             else:
                 move = chess.Move(self.selected_square, square)
@@ -148,7 +148,7 @@ class ChessGUI:
 
         promotion_window = tk.Toplevel(self.root)
         promotion_window.title("Promote Pawn")
-        promotion_window.geometry(f"300x150+{x}+{y}")
+        promotion_window.geometry(f"200x100+{x}+{y}")
 
         pawn_color = 'W' if self.board.piece_at(from_square).color == chess.WHITE else 'D'
         label = tk.Label(promotion_window, text="Promote pawn to:")
@@ -210,14 +210,16 @@ class ChessGUI:
             self.status_label.config(text="Draw!")
 
     def engine_move(self):
-        if not self.board.is_game_over():
-            move = self.agent.act(self.board)
-            self.board.push(move)
+        encoded_board = encode_board(self.board)
+        best_move = self.agent.act(self.board)  # Use act instead of choose_action
+        if best_move:
+            print(f"Engine chose: {best_move}")
+            self.board.push(best_move)
             self.update_board()
             self.update_move_history()
             self.check_game_status()
         else:
-            self.check_game_status()
+            print("Engine found no valid move")
 
 def main():
     root = tk.Tk()

@@ -56,12 +56,15 @@ class DQNAgent:
         if np.random.rand() <= self.epsilon:
             return random.choice(list(state.legal_moves))
         q_values = []
+        best_move = None
         for move in state.legal_moves:
             state.push(move)
             q_value = self.model.predict(np.expand_dims(encode_board(state), axis=0))[0][0]
             q_values.append(q_value)
+            if best_move is None or q_value > q_values[np.argmax(q_values)]:
+                best_move = move
             state.pop()
-        return list(state.legal_moves)[np.argmax(q_values)]
+        return best_move
 
     def replay(self):
         if len(self.memory) < BATCH_SIZE:
