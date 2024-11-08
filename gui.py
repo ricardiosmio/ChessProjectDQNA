@@ -98,6 +98,7 @@ class ChessGUI:
         self.update_labels()
         self.update_move_history()
         self.status_label.config(text="")
+        self.engine_move()  # Silnik wykonuje pierwszy ruch
 
     def update_board(self):
         self.board_canvas.delete("all")
@@ -124,11 +125,14 @@ class ChessGUI:
         else:
             move = chess.Move(self.selected_square, square)
             if move in self.board.legal_moves:
-                self.board.push(move)
-                self.update_board()
-                self.update_move_history()
-                self.check_game_status()
-                self.engine_move()  # Get the engine's move after player's move
+                if self.board.piece_at(self.selected_square).piece_type == chess.PAWN and chess.square_rank(square) in [0, 7]:
+                    self.promote_pawn(move)
+                else:
+                    self.board.push(move)
+                    self.update_board()
+                    self.update_move_history()
+                    self.check_game_status()
+                    self.engine_move()
             self.selected_square = None
             self.update_board()
 
@@ -175,6 +179,25 @@ class ChessGUI:
             self.update_board()
             self.update_move_history()
             self.check_game_status()
+
+    def promote_pawn(self, move):
+        promotion_window = tk.Toplevel(self.root)
+        promotion_window.title("Promote Pawn")
+        promotion_window.geometry("200x100")
+
+        def set_promotion(piece):
+            move.promotion = piece
+            self.board.push(move)
+            promotion_window.destroy()
+            self.update_board()
+            self.update_move_history()
+            self.check_game_status()
+            self.engine_move()
+
+        tk.Button(promotion_window, text="Queen", command=lambda: set_promotion(chess.QUEEN)).pack()
+        tk.Button(promotion_window, text="Rook", command=lambda: set_promotion(chess.ROOK)).pack()
+        tk.Button(promotion_window, text="Bishop", command=lambda: set_promotion(chess.BISHOP)).pack()
+        tk.Button(promotion_window, text="Knight", command=lambda: set_promotion(chess.KNIGHT)).pack()
 
 if __name__ == "__main__":
     root = tk.Tk()

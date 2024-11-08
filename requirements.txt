@@ -1,0 +1,4 @@
+chess
+numpy
+tensorflow
+pillow
