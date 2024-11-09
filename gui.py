@@ -301,6 +301,7 @@ class ChessGUI:
                 self.play_white()
                 while not self.board.is_game_over():
                     self.engine_move()
+                self.agent.replay()  # Call replay after each game
                 self.reset_game()
                 logging.info(f"Game {i+1} ended")
             

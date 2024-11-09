@@ -85,6 +85,7 @@ class DQNAgent:
     def replay(self):
         if len(self.memory) < BATCH_SIZE:
             return
+        print("Replaying and training the model...")  # Debug print
         batch = random.sample(self.memory, BATCH_SIZE)
         for state, action, reward, next_state, done in batch:
             target = reward
@@ -92,7 +93,9 @@ class DQNAgent:
                 target = reward + GAMMA * np.amax(self.target_model.predict(np.expand_dims(encode_board(next_state), axis=0))[0])
             target_f = self.model.predict(np.expand_dims(encode_board(state), axis=0))
             target_f[0][0] = target
-            self.model.fit(np.expand_dims(encode_board(state), axis=0), target_f, epochs=1, verbose=0, callbacks=[self.tensorboard])
+            history = self.model.fit(np.expand_dims(encode_board(state), axis=0), target_f, epochs=1, verbose=0, callbacks=[self.tensorboard])
+            self.tensorboard.on_epoch_end(epoch=0, logs=history.history)  # Explicitly flush logs
+        print("Training complete for one batch.")  # Debug print
         if self.epsilon > MIN_EPSILON:
             self.epsilon *= EPSILON_DECAY
 
