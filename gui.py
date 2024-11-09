@@ -6,6 +6,10 @@ from tkinter import simpledialog
 import chess
 from PIL import Image, ImageTk
 from chess_engine import DQNAgent, encode_board  # Import the engine
+import logging
+
+# Configure logging
+logging.basicConfig(filename='training.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 class ChessGUI:
     LIGHT_SQUARE_COLOR = "#F0D9B5"
@@ -289,12 +293,15 @@ class ChessGUI:
 
     def play_multiple_games(self):
         num_games = simpledialog.askinteger("Input", "How many games do you want to play?")
+        logging.info(f"Starting training session for {num_games} games")
         if num_games:
-            for _ in range(num_games):
+            for i in range(num_games):
+                logging.info(f"Game {i+1} started")
                 self.play_white()
                 while not self.board.is_game_over():
                     self.engine_move()
                 self.reset_game()
+                logging.info(f"Game {i+1} ended")
 
 def main():
     root = tk.Tk()
