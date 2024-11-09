@@ -291,6 +291,7 @@ class ChessGUI:
         else:
             self.check_game_status()
 
+
     def play_multiple_games(self):
         num_games = simpledialog.askinteger("Input", "How many games do you want to play?")
         logging.info(f"Starting training session for {num_games} games")

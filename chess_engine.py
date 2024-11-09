@@ -1,7 +1,7 @@
 import chess
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.models import Sequential
+from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense, Flatten
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras import Input
@@ -22,6 +22,7 @@ EPISODES = 1000  # Number of games to play for training
 # Configure logging
 logging.basicConfig(filename='training.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
+@tf.keras.utils.register_keras_serializable()
 def create_model(input_shape):
     model = Sequential([
         Input(shape=input_shape),
@@ -54,6 +55,10 @@ class DQNAgent:
         self.target_model = create_model(state_shape)
         self.memory = deque(maxlen=MEMORY_SIZE)
         self.epsilon = 1.0
+
+        # Load the trained model
+        if os.path.exists('models/trained_model.h5'):
+            self.model = load_model('models/trained_model.h5')
 
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
