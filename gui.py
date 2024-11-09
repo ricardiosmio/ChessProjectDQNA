@@ -294,30 +294,8 @@ class ChessGUI:
 
     def play_multiple_games(self):
         num_games = simpledialog.askinteger("Input", "How many games do you want to play?")
-        logging.info(f"Starting training session for {num_games} games")
         if num_games:
-            for i in range(num_games):
-                logging.info(f"Game {i+1} started")
-                self.play_white()
-                while not self.board.is_game_over():
-                    self.engine_move()
-                self.agent.replay()  # Call replay after each game
-                self.reset_game()
-                logging.info(f"Game {i+1} ended")
-            
-            # Save the trained model after all games are played
-            self.save_model("models/trained_model.h5")
-            # Start TensorBoard
-            self.start_tensorboard()
-
-    def start_tensorboard(self):
-        os.system('tensorboard --logdir=logs')
-
-
-    def save_model(self, file_path):
-        if not os.path.exists(os.path.dirname(file_path)):
-            os.makedirs(os.path.dirname(file_path))
-        self.agent.save_model(file_path)
+            self.agent.train_agent(num_games)
 
 def main():
     root = tk.Tk()
