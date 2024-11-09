@@ -51,14 +51,13 @@ def encode_board(board):
 class DQNAgent:
     def __init__(self, state_shape):
         self.state_shape = state_shape
-        self.model = create_model(state_shape)
+        if os.path.exists('models/trained_model.h5'):
+            self.model = load_model('models/trained_model.h5')
+        else:
+            self.model = create_model(state_shape)
         self.target_model = create_model(state_shape)
         self.memory = deque(maxlen=MEMORY_SIZE)
         self.epsilon = 1.0
-
-        # Load the trained model
-        if os.path.exists('models/trained_model.h5'):
-            self.model = load_model('models/trained_model.h5')
 
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
