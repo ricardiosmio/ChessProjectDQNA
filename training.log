@@ -310,3 +310,26 @@
 2024-11-09 20:19:13,457 - Game 1 ended, Total Reward: 335, Epsilon: 1.0
 2024-11-09 20:19:17,138 - Game 2 started
 2024-11-09 20:19:19,159 - Game 2 ended, Total Reward: 967, Epsilon: 0.995
+2024-11-09 21:11:01,639 - Starting training session for 1 games
+2024-11-09 21:11:01,641 - Game 1 started
+2024-11-09 21:11:01,700 - Game 1 ended, Total Reward: -1347, Epsilon: 1.0
+2024-11-09 21:11:46,075 - Starting training session for 1 games
+2024-11-09 21:11:46,076 - Game 1 started
+2024-11-09 21:11:46,452 - Game 1 ended, Total Reward: -2486, Epsilon: 0.995
+2024-11-09 21:12:14,725 - Starting training session for 1 games
+2024-11-09 21:12:14,725 - Game 1 started
+2024-11-09 21:12:17,415 - Game 1 ended, Total Reward: -1890, Epsilon: 0.990025
+2024-11-09 21:12:39,199 - Starting training session for 3 games
+2024-11-09 21:12:39,200 - Game 1 started
+2024-11-09 21:12:41,554 - Game 1 ended, Total Reward: 304, Epsilon: 0.985074875
+2024-11-09 21:12:45,168 - Game 2 started
+2024-11-09 21:12:47,868 - Game 2 ended, Total Reward: -1633, Epsilon: 0.9801495006250001
+2024-11-09 21:12:51,351 - Game 3 started
+2024-11-09 21:12:55,477 - Game 3 ended, Total Reward: 1953, Epsilon: 0.9752487531218751
+2024-11-09 21:13:44,297 - Starting training session for 3 games
+2024-11-09 21:13:44,298 - Game 1 started
+2024-11-09 21:14:53,456 - Game 1 ended, Total Reward: 1516, Epsilon: 0.6088145090359074
+2024-11-09 21:14:57,168 - Game 2 started
+2024-11-09 21:16:00,775 - Game 2 ended, Total Reward: 1421, Epsilon: 0.6057704364907278
+2024-11-09 21:16:04,506 - Game 3 started
+2024-11-09 21:16:34,030 - Game 3 ended, Total Reward: -374, Epsilon: 0.6027415843082742

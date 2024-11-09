@@ -1,7 +1,7 @@
 import chess
 import numpy as np
 import tensorflow as tf
-from tensorflow.keras.models import Sequential, load_model
+from tensorflow.keras.models import Sequential, load_model, save_model
 from tensorflow.keras.layers import Dense, Flatten, Input
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import mse
@@ -51,8 +51,9 @@ def encode_board(board):
     return encoded
 
 class DQNAgent:
-    def __init__(self, state_shape):
+    def __init__(self, state_shape, start_games=100):
         self.state_shape = state_shape
+        self.start_games = start_games
         if os.path.exists('models/trained_model.h5'):
             self.model = load_model('models/trained_model.h5')
             self.model.compile(optimizer=Adam(learning_rate=ALPHA), loss='mse', metrics=['accuracy'])
@@ -61,7 +62,20 @@ class DQNAgent:
             self.model = create_model(state_shape)
         self.target_model = create_model(state_shape)
         self.memory = deque(maxlen=MEMORY_SIZE)
+        
+        # Load epsilon value from file if it exists
         self.epsilon = 1.0
+        epsilon_file = 'epsilon_value.txt'
+        if os.path.isfile(epsilon_file):
+            with open(epsilon_file, 'r') as f:
+                self.epsilon = float(f.read())
+                
+        self.epsilon_min = 0.01  # Minimum epsilon value
+        self.epsilon_decay = 0.995  # Decay rate for epsilon
+
+    def create_model(self, state_shape):
+        # Define your model creation logic here
+        pass
 
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
@@ -75,7 +89,7 @@ class DQNAgent:
             state.push(move)
             q_value = self.model.predict(np.expand_dims(encode_board(state), axis=0))[0][0]
             q_values.append(q_value)
-            if best_move is None or q_value > q_values[np.argmax(q_values)]:
+            if best_move is None or q_value > max(q_values):
                 best_move = move
             state.pop()
         return best_move
@@ -98,12 +112,12 @@ class DQNAgent:
         self.target_model.set_weights(self.model.get_weights())
 
     def save_model(self, filepath):
-        self.model.save(filepath)  # Removed 'save_format' argument
+        save_model(self.model, filepath)
 
     def train_agent(self, num_games):
         logging.info(f"Starting training session for {num_games} games")
         for i in range(num_games):
-            logging.info(f"Game {i+1} started")
+            logging.info(f"Game {i + 1} started")
             board = chess.Board()
             state = encode_board(board)
             total_reward = 0
@@ -122,17 +136,16 @@ class DQNAgent:
 
                 if done:
                     self.update_target_model()
-                    logging.info(f"Game {i+1} ended, Total Reward: {total_reward}, Epsilon: {self.epsilon}")
+                    logging.info(f"Game {i + 1} ended, Total Reward: {total_reward}, Epsilon: {self.epsilon}")
                     break
 
             self.replay()
 
-            # Save the model periodically
-            if i % 100 == 0:
-                self.save_model(f'models/model_{i}.keras')  # Save in the recommended Keras format
+        # Save the updated epsilon value
+        with open('epsilon_value.txt', 'w') as f:
+            f.write(str(self.epsilon))
 
-        # Save the trained model after all games are played
-        self.save_model(f"models/trained_model_{num_games}.keras")
+        self.save_model(f"models/trained_model_{self.start_games + num_games}.keras")
 
 def evaluate_board(board):
     if board.is_checkmate():
