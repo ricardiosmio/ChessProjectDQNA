@@ -56,14 +56,15 @@ class DQNAgent:
     def __init__(self, state_shape):
         self.state_shape = state_shape
         if os.path.exists('models/trained_model.h5'):
-            self.model = load_model('models/trained_model.h5')
+            self.model = load_model('models/trained_model.h5', custom_objects={'mse': mse})
         else:
             self.model = create_model(state_shape)
         self.target_model = create_model(state_shape)
         self.memory = deque(maxlen=MEMORY_SIZE)
         self.epsilon = 1.0
-        self.tensorboard = TensorBoard(log_dir='logs', update_freq='batch')
 
+        # TensorBoard setup
+        self.tensorboard = TensorBoard(log_dir='logs', update_freq='batch')
 
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))

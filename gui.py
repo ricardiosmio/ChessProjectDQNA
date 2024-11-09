@@ -306,6 +306,12 @@ class ChessGUI:
             
             # Save the trained model after all games are played
             self.save_model("models/trained_model.h5")
+            # Start TensorBoard
+            self.start_tensorboard()
+
+    def start_tensorboard(self):
+        os.system('tensorboard --logdir=logs')
+
 
     def save_model(self, file_path):
         if not os.path.exists(os.path.dirname(file_path)):
