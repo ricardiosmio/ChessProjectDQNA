@@ -5,7 +5,6 @@ from tensorflow.keras.models import Sequential, load_model
 from tensorflow.keras.layers import Dense, Flatten, Input
 from tensorflow.keras.optimizers import Adam
 from tensorflow.keras.losses import mse
-from tensorflow.keras.callbacks import TensorBoard
 import random
 from collections import deque
 import os
@@ -56,14 +55,13 @@ class DQNAgent:
         self.state_shape = state_shape
         if os.path.exists('models/trained_model.h5'):
             self.model = load_model('models/trained_model.h5')
-            # Ensure metrics are compiled by evaluating the model
-            self.model.evaluate(np.zeros((1, 64, 12)), np.zeros((1, 1)))
+            self.model.compile(optimizer=Adam(learning_rate=ALPHA), loss='mse', metrics=['accuracy'])
+            self.model.evaluate(np.zeros((1, 64, 12)), np.zeros((1, 1)))  # Ensure metrics are compiled by evaluating the model
         else:
             self.model = create_model(state_shape)
         self.target_model = create_model(state_shape)
         self.memory = deque(maxlen=MEMORY_SIZE)
         self.epsilon = 1.0
-        self.tensorboard = TensorBoard(log_dir='logs', update_freq='batch')
 
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
@@ -85,7 +83,6 @@ class DQNAgent:
     def replay(self):
         if len(self.memory) < BATCH_SIZE:
             return
-        print("Replaying and training the model...")  # Debug print
         batch = random.sample(self.memory, BATCH_SIZE)
         for state, action, reward, next_state, done in batch:
             target = reward
@@ -93,9 +90,7 @@ class DQNAgent:
                 target = reward + GAMMA * np.amax(self.target_model.predict(np.expand_dims(next_state, axis=0))[0])
             target_f = self.model.predict(np.expand_dims(state, axis=0))
             target_f[0][0] = target
-            history = self.model.fit(np.expand_dims(state, axis=0), target_f, epochs=1, verbose=0, callbacks=[self.tensorboard])
-            self.tensorboard.on_epoch_end(epoch=0, logs=history.history)  # Explicitly flush logs
-        print("Training complete for one batch.")  # Debug print
+            self.model.fit(np.expand_dims(state, axis=0), target_f, epochs=1, verbose=0)
         if self.epsilon > MIN_EPSILON:
             self.epsilon *= EPSILON_DECAY
 
@@ -103,7 +98,7 @@ class DQNAgent:
         self.target_model.set_weights(self.model.get_weights())
 
     def save_model(self, filepath):
-        self.model.save(filepath, save_format='keras')
+        self.model.save(filepath)  # Removed 'save_format' argument
 
     def train_agent(self, num_games):
         logging.info(f"Starting training session for {num_games} games")
@@ -136,10 +131,8 @@ class DQNAgent:
             if i % 100 == 0:
                 self.save_model(f'models/model_{i}.keras')  # Save in the recommended Keras format
 
-    # Save the trained model after all games are played
-    self.save_model(f"models/trained_model_{num_games}.keras")
-    # Start TensorBoard
-    self.start_tensorboard()
+        # Save the trained model after all games are played
+        self.save_model(f"models/trained_model_{num_games}.keras")
 
 def evaluate_board(board):
     if board.is_checkmate():

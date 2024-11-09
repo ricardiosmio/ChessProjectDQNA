@@ -11,6 +11,8 @@ from collections import deque
 import os
 import logging
 
+logging.basicConfig(filename='training.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+
 # Parameters
 GAMMA = 0.99
 ALPHA = 0.001
@@ -19,9 +21,6 @@ BATCH_SIZE = 64
 EPSILON_DECAY = 0.995
 MIN_EPSILON = 0.01
 EPISODES = 1000  # Number of games to play for training
-
-# Configure logging
-logging.basicConfig(filename='training.log', level=logging.INFO, format='%(asctime)s - %(message)s')
 
 # Register mse as a serializable function
 tf.keras.utils.register_keras_serializable()(mse)
@@ -35,7 +34,7 @@ def create_model(input_shape):
         Dense(64, activation='relu'),
         Dense(1, activation='linear')
     ])
-    model.compile(optimizer=Adam(learning_rate=ALPHA), loss='mse')
+    model.compile(optimizer=Adam(learning_rate=ALPHA), loss='mse', metrics=['accuracy'])
     return model
 
 def encode_board(board):
@@ -55,21 +54,21 @@ def encode_board(board):
 class DQNAgent:
     def __init__(self, state_shape):
         self.state_shape = state_shape
-        if os.path.exists('models/trained_model.h5'):
-            self.model = load_model('models/trained_model.h5', custom_objects={'mse': mse})
+        if os.path.exists('models/trained_model_100.keras'):
+            self.model = load_model('models/trained_model_100.keras')
+            self.model.evaluate(np.zeros((1, 64, 12)), np.zeros((1, 1)))
         else:
-            self.model = create_model(state_shape)
-        self.target_model = create_model(state_shape)
+            raise FileNotFoundError("Model 'trained_model_100.keras' not found.")
+        self.target_model = create_model(state_shape)  # Mozna usunąć, jeśli nie jest używane
         self.memory = deque(maxlen=MEMORY_SIZE)
         self.epsilon = 1.0
-
-        # TensorBoard setup
         self.tensorboard = TensorBoard(log_dir='logs', update_freq='batch')
 
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
 
     def act(self, state):
+        logging.info("Using model 'trained_model_100.keras' to predict the move.")
         if np.random.rand() <= self.epsilon:
             return random.choice(list(state.legal_moves))
         q_values = []
@@ -86,14 +85,25 @@ class DQNAgent:
     def replay(self):
         if len(self.memory) < BATCH_SIZE:
             return
+        print("Replaying and training the model...")  # Debug print
         batch = random.sample(self.memory, BATCH_SIZE)
         for state, action, reward, next_state, done in batch:
             target = reward
             if not done:
-                target = reward + GAMMA * np.amax(self.target_model.predict(np.expand_dims(encode_board(next_state), axis=0))[0])
-            target_f = self.model.predict(np.expand_dims(encode_board(state), axis=0))
+                target = reward + GAMMA * np.amax(self.target_model.predict(np.expand_dims(next_state, axis=0))[0])
+            target_f = self.model.predict(np.expand_dims(state, axis=0))
             target_f[0][0] = target
-            self.model.fit(np.expand_dims(encode_board(state), axis=0), target_f, epochs=1, verbose=0, callbacks=[self.tensorboard])
+            history = self.model.fit(np.expand_dims(state, axis=0), target_f, epochs=1, verbose=0, callbacks=[self.tensorboard])
+            logs = {k: (v[0] if isinstance(v, np.ndarray) and v.size == 1 else v) for k, v in history.history.items()}
+            try:
+                if not self.tensorboard._train_writer._closed:
+                    self.tensorboard.on_epoch_end(epoch=0, logs=logs)  # Explicitly flush logs
+            except RuntimeError as e:
+                if 'SummaryWriter' in str(e):
+                    self.tensorboard = TensorBoard(log_dir='logs', update_freq='batch')
+                    self.tensorboard.set_model(self.model)
+                    self.tensorboard.on_epoch_end(epoch=0, logs=logs)  # Retry after reinitializing
+        print("Training complete for one batch.")  # Debug print
         if self.epsilon > MIN_EPSILON:
             self.epsilon *= EPSILON_DECAY
 
@@ -101,12 +111,12 @@ class DQNAgent:
         self.target_model.set_weights(self.model.get_weights())
 
     def save_model(self, filepath):
-        self.model.save(filepath)
+        self.model.save(filepath, save_format='keras')
 
-    def train_agent(self):
-        logging.info("Training started")
-        for e in range(EPISODES):
-            logging.info(f"Starting episode {e+1}")
+    def train_agent(self, num_games):
+        logging.info(f"Starting training session for {num_games} games")
+        for i in range(num_games):
+            logging.info(f"Game {i+1} started")
             board = chess.Board()
             state = encode_board(board)
             total_reward = 0
@@ -125,14 +135,19 @@ class DQNAgent:
 
                 if done:
                     self.update_target_model()
-                    logging.info(f"Episode: {e+1}/{EPISODES}, Total Reward: {total_reward}, Epsilon: {self.epsilon}")
+                    logging.info(f"Game {i+1} ended, Total Reward: {total_reward}, Epsilon: {self.epsilon}")
                     break
 
             self.replay()
 
             # Save the model periodically
-            if e % 100 == 0:
-                self.save_model(f'models/model_{e}.h5')
+            if i % 100 == 0:
+                self.save_model(f'models/model_{i}.keras')  # Save in the recommended Keras format
+
+        # Save the trained model after all games are played
+        self.save_model(f"models/trained_model_{num_games}.keras")
+        # Start TensorBoard
+        self.start_tensorboard()
 
 def evaluate_board(board):
     if board.is_checkmate():
@@ -153,4 +168,4 @@ if __name__ == "__main__":
     if not os.path.exists('models'):
         os.makedirs('models')
     agent = DQNAgent(state_shape=(64, 12))
-    agent.train_agent()
+    agent.train_agent(EPISODES)

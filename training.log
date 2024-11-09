@@ -5,3 +5,308 @@
 2024-11-09 18:33:47,599 - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=keras
 2024-11-09 18:33:47,617 - Game 2 started
 2024-11-09 18:33:47,648 - Game 2 ended, Total Reward: -3421, Epsilon: 1.0
+2024-11-09 18:40:12,284 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 18:40:26,076 - Starting training session for 100 games
+2024-11-09 18:40:26,076 - Game 1 started
+2024-11-09 18:40:26,135 - Game 1 ended, Total Reward: 71, Epsilon: 1.0
+2024-11-09 18:41:52,787 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 18:41:55,932 - Starting training session for 100 games
+2024-11-09 18:41:55,933 - Game 1 started
+2024-11-09 18:41:56,009 - Game 1 ended, Total Reward: 1664, Epsilon: 1.0
+2024-11-09 18:43:08,949 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 18:43:11,721 - Starting training session for 100 games
+2024-11-09 18:43:11,722 - Game 1 started
+2024-11-09 18:43:11,797 - Game 1 ended, Total Reward: -194, Epsilon: 1.0
+2024-11-09 18:44:05,974 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 18:44:09,181 - Starting training session for 100 games
+2024-11-09 18:44:09,181 - Game 1 started
+2024-11-09 18:44:09,253 - Game 1 ended, Total Reward: -2941, Epsilon: 1.0
+2024-11-09 18:45:14,944 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 18:45:17,583 - Starting training session for 100 games
+2024-11-09 18:45:17,584 - Game 1 started
+2024-11-09 18:45:17,661 - Game 1 ended, Total Reward: 2762, Epsilon: 1.0
+2024-11-09 18:46:12,866 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 18:46:15,890 - Starting training session for 100 games
+2024-11-09 18:46:15,891 - Game 1 started
+2024-11-09 18:46:15,972 - Game 1 ended, Total Reward: 2219, Epsilon: 1.0
+2024-11-09 18:47:23,497 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 18:47:26,295 - Starting training session for 100 games
+2024-11-09 18:47:26,296 - Game 1 started
+2024-11-09 18:47:26,369 - Game 1 ended, Total Reward: 1165, Epsilon: 1.0
+2024-11-09 18:47:30,459 - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=keras
+2024-11-09 18:47:30,469 - Game 2 started
+2024-11-09 18:47:30,492 - Game 2 ended, Total Reward: 522, Epsilon: 0.995
+2024-11-09 18:47:34,331 - Game 3 started
+2024-11-09 18:47:35,008 - Game 3 ended, Total Reward: -904, Epsilon: 0.990025
+2024-11-09 18:47:38,999 - Game 4 started
+2024-11-09 18:47:40,160 - Game 4 ended, Total Reward: 1034, Epsilon: 0.985074875
+2024-11-09 18:47:44,099 - Game 5 started
+2024-11-09 18:47:46,966 - Game 5 ended, Total Reward: -1939, Epsilon: 0.9801495006250001
+2024-11-09 18:47:50,836 - Game 6 started
+2024-11-09 18:47:53,062 - Game 6 ended, Total Reward: -1034, Epsilon: 0.9752487531218751
+2024-11-09 18:47:56,994 - Game 7 started
+2024-11-09 18:48:00,998 - Game 7 ended, Total Reward: 61, Epsilon: 0.9703725093562657
+2024-11-09 18:48:04,980 - Game 8 started
+2024-11-09 18:48:06,319 - Game 8 ended, Total Reward: -1744, Epsilon: 0.9655206468094844
+2024-11-09 18:48:10,150 - Game 9 started
+2024-11-09 18:48:11,869 - Game 9 ended, Total Reward: 1045, Epsilon: 0.960693043575437
+2024-11-09 18:48:15,820 - Game 10 started
+2024-11-09 18:48:17,625 - Game 10 ended, Total Reward: 108, Epsilon: 0.9558895783575597
+2024-11-09 18:48:21,672 - Game 11 started
+2024-11-09 18:48:27,962 - Game 11 ended, Total Reward: 1591, Epsilon: 0.9511101304657719
+2024-11-09 18:48:31,863 - Game 12 started
+2024-11-09 18:48:36,168 - Game 12 ended, Total Reward: -2062, Epsilon: 0.946354579813443
+2024-11-09 18:48:40,193 - Game 13 started
+2024-11-09 18:48:50,987 - Game 13 ended, Total Reward: 790, Epsilon: 0.9416228069143757
+2024-11-09 18:48:54,914 - Game 14 started
+2024-11-09 18:49:02,717 - Game 14 ended, Total Reward: 2645, Epsilon: 0.9369146928798039
+2024-11-09 18:49:06,632 - Game 15 started
+2024-11-09 18:49:06,633 - Game 15 ended, Total Reward: 100, Epsilon: 0.9322301194154049
+2024-11-09 18:49:10,658 - Game 16 started
+2024-11-09 18:49:18,772 - Game 16 ended, Total Reward: -2397, Epsilon: 0.9275689688183278
+2024-11-09 18:49:22,715 - Game 17 started
+2024-11-09 18:49:39,462 - Game 17 ended, Total Reward: 1950, Epsilon: 0.9229311239742362
+2024-11-09 18:49:43,373 - Game 18 started
+2024-11-09 18:49:51,348 - Game 18 ended, Total Reward: -281, Epsilon: 0.918316468354365
+2024-11-09 18:49:55,286 - Game 19 started
+2024-11-09 18:49:57,565 - Game 19 ended, Total Reward: -667, Epsilon: 0.9137248860125932
+2024-11-09 18:50:01,534 - Game 20 started
+2024-11-09 18:50:18,863 - Game 20 ended, Total Reward: -721, Epsilon: 0.9091562615825302
+2024-11-09 18:50:22,836 - Game 21 started
+2024-11-09 18:50:31,116 - Game 21 ended, Total Reward: 1239, Epsilon: 0.9046104802746175
+2024-11-09 18:50:35,045 - Game 22 started
+2024-11-09 18:50:48,036 - Game 22 ended, Total Reward: -3332, Epsilon: 0.9000874278732445
+2024-11-09 18:50:52,050 - Game 23 started
+2024-11-09 18:51:03,002 - Game 23 ended, Total Reward: 1291, Epsilon: 0.8955869907338783
+2024-11-09 18:51:07,009 - Game 24 started
+2024-11-09 18:51:10,338 - Game 24 ended, Total Reward: 587, Epsilon: 0.8911090557802088
+2024-11-09 18:51:14,451 - Game 25 started
+2024-11-09 18:51:25,654 - Game 25 ended, Total Reward: 335, Epsilon: 0.8866535105013078
+2024-11-09 18:51:29,710 - Game 26 started
+2024-11-09 18:51:40,014 - Game 26 ended, Total Reward: 1824, Epsilon: 0.8822202429488013
+2024-11-09 18:51:44,011 - Game 27 started
+2024-11-09 18:52:05,649 - Game 27 ended, Total Reward: -169, Epsilon: 0.8778091417340573
+2024-11-09 18:52:09,555 - Game 28 started
+2024-11-09 18:52:32,498 - Game 28 ended, Total Reward: 927, Epsilon: 0.8734200960253871
+2024-11-09 18:52:36,483 - Game 29 started
+2024-11-09 18:52:53,018 - Game 29 ended, Total Reward: 2035, Epsilon: 0.8690529955452602
+2024-11-09 18:52:56,962 - Game 30 started
+2024-11-09 18:53:19,981 - Game 30 ended, Total Reward: -1346, Epsilon: 0.8647077305675338
+2024-11-09 18:53:23,906 - Game 31 started
+2024-11-09 18:53:51,415 - Game 31 ended, Total Reward: 221, Epsilon: 0.8603841919146962
+2024-11-09 18:53:56,003 - Game 32 started
+2024-11-09 18:54:18,596 - Game 32 ended, Total Reward: -2937, Epsilon: 0.8560822709551227
+2024-11-09 18:54:22,762 - Game 33 started
+2024-11-09 18:54:39,369 - Game 33 ended, Total Reward: 1043, Epsilon: 0.851801859600347
+2024-11-09 18:54:43,531 - Game 34 started
+2024-11-09 18:55:06,202 - Game 34 ended, Total Reward: 1979, Epsilon: 0.8475428503023453
+2024-11-09 18:55:10,632 - Game 35 started
+2024-11-09 18:55:35,793 - Game 35 ended, Total Reward: 241, Epsilon: 0.8433051360508336
+2024-11-09 18:55:40,350 - Game 36 started
+2024-11-09 18:55:53,874 - Game 36 ended, Total Reward: -505, Epsilon: 0.8390886103705794
+2024-11-09 18:55:58,059 - Game 37 started
+2024-11-09 18:56:24,048 - Game 37 ended, Total Reward: 3425, Epsilon: 0.8348931673187264
+2024-11-09 18:56:28,126 - Game 38 started
+2024-11-09 18:56:30,605 - Game 38 ended, Total Reward: 123, Epsilon: 0.8307187014821328
+2024-11-09 18:56:34,820 - Game 39 started
+2024-11-09 18:56:39,733 - Game 39 ended, Total Reward: 292, Epsilon: 0.8265651079747222
+2024-11-09 18:56:43,849 - Game 40 started
+2024-11-09 18:57:00,727 - Game 40 ended, Total Reward: 926, Epsilon: 0.8224322824348486
+2024-11-09 18:57:04,759 - Game 41 started
+2024-11-09 18:57:27,132 - Game 41 ended, Total Reward: 699, Epsilon: 0.8183201210226743
+2024-11-09 18:57:31,266 - Game 42 started
+2024-11-09 18:58:01,200 - Game 42 ended, Total Reward: 2243, Epsilon: 0.8142285204175609
+2024-11-09 18:58:05,395 - Game 43 started
+2024-11-09 18:58:23,498 - Game 43 ended, Total Reward: 58, Epsilon: 0.810157377815473
+2024-11-09 18:58:27,612 - Game 44 started
+2024-11-09 18:58:56,668 - Game 44 ended, Total Reward: -2503, Epsilon: 0.8061065909263957
+2024-11-09 18:59:00,694 - Game 45 started
+2024-11-09 18:59:40,609 - Game 45 ended, Total Reward: -856, Epsilon: 0.8020760579717637
+2024-11-09 18:59:44,622 - Game 46 started
+2024-11-09 19:00:26,250 - Game 46 ended, Total Reward: -3282, Epsilon: 0.798065677681905
+2024-11-09 19:00:30,327 - Game 47 started
+2024-11-09 19:00:47,641 - Game 47 ended, Total Reward: 119, Epsilon: 0.7940753492934954
+2024-11-09 19:00:51,721 - Game 48 started
+2024-11-09 19:01:17,769 - Game 48 ended, Total Reward: 1816, Epsilon: 0.7901049725470279
+2024-11-09 19:01:21,822 - Game 49 started
+2024-11-09 19:01:45,270 - Game 49 ended, Total Reward: 1663, Epsilon: 0.7861544476842928
+2024-11-09 19:01:49,494 - Game 50 started
+2024-11-09 19:02:10,941 - Game 50 ended, Total Reward: 1027, Epsilon: 0.7822236754458713
+2024-11-09 19:02:15,066 - Game 51 started
+2024-11-09 19:02:40,881 - Game 51 ended, Total Reward: -3, Epsilon: 0.778312557068642
+2024-11-09 19:02:45,037 - Game 52 started
+2024-11-09 19:03:09,892 - Game 52 ended, Total Reward: 856, Epsilon: 0.7744209942832988
+2024-11-09 19:03:13,973 - Game 53 started
+2024-11-09 19:03:43,144 - Game 53 ended, Total Reward: 2699, Epsilon: 0.7705488893118823
+2024-11-09 19:03:47,108 - Game 54 started
+2024-11-09 19:04:15,380 - Game 54 ended, Total Reward: -2021, Epsilon: 0.7666961448653229
+2024-11-09 19:04:19,633 - Game 55 started
+2024-11-09 19:05:00,982 - Game 55 ended, Total Reward: 725, Epsilon: 0.7628626641409962
+2024-11-09 19:05:05,187 - Game 56 started
+2024-11-09 19:05:30,003 - Game 56 ended, Total Reward: 863, Epsilon: 0.7590483508202912
+2024-11-09 19:05:34,060 - Game 57 started
+2024-11-09 19:06:38,709 - Game 57 ended, Total Reward: 2333, Epsilon: 0.7552531090661897
+2024-11-09 19:06:42,826 - Game 58 started
+2024-11-09 19:07:22,596 - Game 58 ended, Total Reward: -1863, Epsilon: 0.7514768435208588
+2024-11-09 19:07:26,695 - Game 59 started
+2024-11-09 19:08:03,559 - Game 59 ended, Total Reward: -191, Epsilon: 0.7477194593032545
+2024-11-09 19:08:07,712 - Game 60 started
+2024-11-09 19:08:38,932 - Game 60 ended, Total Reward: -1330, Epsilon: 0.7439808620067382
+2024-11-09 19:08:43,063 - Game 61 started
+2024-11-09 19:09:21,059 - Game 61 ended, Total Reward: 33, Epsilon: 0.7402609576967045
+2024-11-09 19:09:25,385 - Game 62 started
+2024-11-09 19:10:07,224 - Game 62 ended, Total Reward: 3461, Epsilon: 0.736559652908221
+2024-11-09 19:10:11,247 - Game 63 started
+2024-11-09 19:10:48,371 - Game 63 ended, Total Reward: -283, Epsilon: 0.7328768546436799
+2024-11-09 19:10:52,730 - Game 64 started
+2024-11-09 19:11:53,298 - Game 64 ended, Total Reward: 4071, Epsilon: 0.7292124703704616
+2024-11-09 19:11:57,479 - Game 65 started
+2024-11-09 19:12:36,183 - Game 65 ended, Total Reward: 2463, Epsilon: 0.7255664080186093
+2024-11-09 19:12:40,526 - Game 66 started
+2024-11-09 19:13:44,435 - Game 66 ended, Total Reward: -4369, Epsilon: 0.7219385759785162
+2024-11-09 19:13:48,682 - Game 67 started
+2024-11-09 19:14:09,738 - Game 67 ended, Total Reward: -833, Epsilon: 0.7183288830986236
+2024-11-09 19:14:13,912 - Game 68 started
+2024-11-09 19:14:58,852 - Game 68 ended, Total Reward: 31, Epsilon: 0.7147372386831305
+2024-11-09 19:15:03,035 - Game 69 started
+2024-11-09 19:15:32,973 - Game 69 ended, Total Reward: -613, Epsilon: 0.7111635524897149
+2024-11-09 19:15:37,125 - Game 70 started
+2024-11-09 19:16:19,636 - Game 70 ended, Total Reward: 45, Epsilon: 0.7076077347272662
+2024-11-09 19:16:24,002 - Game 71 started
+2024-11-09 19:16:50,723 - Game 71 ended, Total Reward: 7, Epsilon: 0.7040696960536299
+2024-11-09 19:16:54,848 - Game 72 started
+2024-11-09 19:17:48,439 - Game 72 ended, Total Reward: 3035, Epsilon: 0.7005493475733617
+2024-11-09 19:17:52,723 - Game 73 started
+2024-11-09 19:18:42,859 - Game 73 ended, Total Reward: -977, Epsilon: 0.697046600835495
+2024-11-09 19:18:47,060 - Game 74 started
+2024-11-09 19:19:42,597 - Game 74 ended, Total Reward: 2261, Epsilon: 0.6935613678313175
+2024-11-09 19:19:46,780 - Game 75 started
+2024-11-09 19:20:24,646 - Game 75 ended, Total Reward: -647, Epsilon: 0.6900935609921609
+2024-11-09 19:20:28,781 - Game 76 started
+2024-11-09 19:21:41,240 - Game 76 ended, Total Reward: 5385, Epsilon: 0.6866430931872001
+2024-11-09 19:21:45,474 - Game 77 started
+2024-11-09 19:22:27,511 - Game 77 ended, Total Reward: 226, Epsilon: 0.6832098777212641
+2024-11-09 19:22:31,631 - Game 78 started
+2024-11-09 19:23:05,263 - Game 78 ended, Total Reward: 2371, Epsilon: 0.6797938283326578
+2024-11-09 19:23:09,395 - Game 79 started
+2024-11-09 19:23:48,118 - Game 79 ended, Total Reward: -1870, Epsilon: 0.6763948591909945
+2024-11-09 19:23:52,364 - Game 80 started
+2024-11-09 19:24:47,375 - Game 80 ended, Total Reward: -523, Epsilon: 0.6730128848950395
+2024-11-09 19:24:51,738 - Game 81 started
+2024-11-09 19:25:19,520 - Game 81 ended, Total Reward: -320, Epsilon: 0.6696478204705644
+2024-11-09 19:25:23,800 - Game 82 started
+2024-11-09 19:26:23,982 - Game 82 ended, Total Reward: -2631, Epsilon: 0.6662995813682115
+2024-11-09 19:26:28,206 - Game 83 started
+2024-11-09 19:27:08,484 - Game 83 ended, Total Reward: -981, Epsilon: 0.6629680834613705
+2024-11-09 19:27:12,625 - Game 84 started
+2024-11-09 19:28:02,026 - Game 84 ended, Total Reward: 742, Epsilon: 0.6596532430440636
+2024-11-09 19:28:06,316 - Game 85 started
+2024-11-09 19:29:15,629 - Game 85 ended, Total Reward: 3685, Epsilon: 0.6563549768288433
+2024-11-09 19:29:19,897 - Game 86 started
+2024-11-09 19:29:55,492 - Game 86 ended, Total Reward: 1459, Epsilon: 0.653073201944699
+2024-11-09 19:29:59,749 - Game 87 started
+2024-11-09 19:30:50,169 - Game 87 ended, Total Reward: -1804, Epsilon: 0.6498078359349755
+2024-11-09 19:30:54,464 - Game 88 started
+2024-11-09 19:31:44,101 - Game 88 ended, Total Reward: 259, Epsilon: 0.6465587967553006
+2024-11-09 19:31:48,437 - Game 89 started
+2024-11-09 19:32:49,685 - Game 89 ended, Total Reward: 2445, Epsilon: 0.6433260027715241
+2024-11-09 19:32:53,927 - Game 90 started
+2024-11-09 19:33:58,760 - Game 90 ended, Total Reward: 6105, Epsilon: 0.6401093727576664
+2024-11-09 19:34:02,990 - Game 91 started
+2024-11-09 19:35:24,351 - Game 91 ended, Total Reward: -1911, Epsilon: 0.6369088258938781
+2024-11-09 19:35:28,682 - Game 92 started
+2024-11-09 19:35:58,462 - Game 92 ended, Total Reward: 293, Epsilon: 0.6337242817644086
+2024-11-09 19:36:02,827 - Game 93 started
+2024-11-09 19:37:13,092 - Game 93 ended, Total Reward: 773, Epsilon: 0.6305556603555866
+2024-11-09 19:37:17,392 - Game 94 started
+2024-11-09 19:38:16,504 - Game 94 ended, Total Reward: 633, Epsilon: 0.6274028820538087
+2024-11-09 19:38:20,800 - Game 95 started
+2024-11-09 19:38:57,933 - Game 95 ended, Total Reward: 1741, Epsilon: 0.6242658676435396
+2024-11-09 19:39:02,379 - Game 96 started
+2024-11-09 19:40:06,157 - Game 96 ended, Total Reward: -3150, Epsilon: 0.6211445383053219
+2024-11-09 19:40:10,400 - Game 97 started
+2024-11-09 19:40:56,321 - Game 97 ended, Total Reward: -496, Epsilon: 0.6180388156137953
+2024-11-09 19:41:00,552 - Game 98 started
+2024-11-09 19:41:53,876 - Game 98 ended, Total Reward: 1569, Epsilon: 0.6149486215357263
+2024-11-09 19:41:58,129 - Game 99 started
+2024-11-09 19:43:01,469 - Game 99 ended, Total Reward: -422, Epsilon: 0.6118738784280476
+2024-11-09 19:43:05,730 - Game 100 started
+2024-11-09 19:43:33,786 - Game 100 ended, Total Reward: 626, Epsilon: 0.6088145090359074
+2024-11-09 19:43:38,062 - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=keras
+2024-11-09 19:51:47,093 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 19:52:46,000 - Starting training session for 1 games
+2024-11-09 19:52:46,000 - Game 1 started
+2024-11-09 19:52:46,072 - Game 1 ended, Total Reward: -5086, Epsilon: 1.0
+2024-11-09 19:52:50,201 - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=keras
+2024-11-09 19:52:50,210 - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=keras
+2024-11-09 19:57:01,758 - Starting training session for 1 games
+2024-11-09 19:57:01,758 - Game 1 started
+2024-11-09 19:57:01,807 - Game 1 ended, Total Reward: -961, Epsilon: 1.0
+2024-11-09 19:57:05,856 - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=keras
+2024-11-09 19:57:05,864 - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=keras
+2024-11-09 20:03:43,092 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:03:58,281 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:00,922 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:02,721 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:06,155 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:12,406 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:15,944 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:17,152 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:19,821 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:21,141 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:44,499 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:45,379 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:47,350 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:49,812 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:50,854 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:51,628 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:52,199 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:54,121 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:55,385 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:58,014 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:59,269 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:04:59,720 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:01,170 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:02,115 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:03,413 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:04,340 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:06,501 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:07,956 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:10,356 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:10,987 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:12,525 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:13,943 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:15,001 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:15,534 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:18,274 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:19,169 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:20,040 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:21,074 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:22,928 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:23,896 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:26,670 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:27,609 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:29,986 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:30,669 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:31,566 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:34,934 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:05:36,144 - Using model 'trained_model_100.keras' to predict the move.
+2024-11-09 20:12:22,985 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 20:12:53,215 - Starting training session for 1 games
+2024-11-09 20:12:53,216 - Game 1 started
+2024-11-09 20:12:53,266 - Game 1 ended, Total Reward: 1410, Epsilon: 1.0
+2024-11-09 20:14:44,804 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 20:14:53,516 - Starting training session for 100 games
+2024-11-09 20:14:53,517 - Game 1 started
+2024-11-09 20:14:53,573 - Game 1 ended, Total Reward: -664, Epsilon: 1.0
+2024-11-09 20:14:57,259 - The `save_format` argument is deprecated in Keras 3. We recommend removing this argument as it can be inferred from the file path. Received: save_format=keras
+2024-11-09 20:14:57,270 - Game 2 started
+2024-11-09 20:14:57,904 - Game 2 ended, Total Reward: 2487, Epsilon: 0.995
+2024-11-09 20:15:01,425 - Game 3 started
+2024-11-09 20:15:03,102 - Game 3 ended, Total Reward: 391, Epsilon: 0.990025
+2024-11-09 20:19:09,627 - Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.
+2024-11-09 20:19:13,389 - Starting training session for 2 games
+2024-11-09 20:19:13,390 - Game 1 started
+2024-11-09 20:19:13,457 - Game 1 ended, Total Reward: 335, Epsilon: 1.0
+2024-11-09 20:19:17,138 - Game 2 started
+2024-11-09 20:19:19,159 - Game 2 ended, Total Reward: 967, Epsilon: 0.995
