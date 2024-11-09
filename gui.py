@@ -119,11 +119,18 @@ class ChessGUI:
         for piece, filename in pieces.items():
             image = Image.open(f"images/{filename}.png")
             piece_images[piece] = ImageTk.PhotoImage(image.resize((60, 60)))
+
+        # Load the transparent yellow highlight image
+        highlight_image = Image.open("images/yellow_transparent.png")
+        self.highlight_image = ImageTk.PhotoImage(highlight_image.resize((60, 60)))
+        
         return piece_images
 
     def play_white(self):
         self.board = chess.Board()
         self.is_white_player = True
+        self.highlight_last_move_from = None
+        self.highlight_last_move_to = None
         self.update_board()
         self.update_labels()
         self.update_move_history()
@@ -132,6 +139,8 @@ class ChessGUI:
     def play_black(self):
         self.board = chess.Board()
         self.is_white_player = False
+        self.highlight_last_move_from = None
+        self.highlight_last_move_to = None
         self.update_board()
         self.update_labels()
         self.update_move_history()
@@ -155,11 +164,10 @@ class ChessGUI:
         for square in chess.SQUARES:
             x = (square % 8) * 60
             y = (7 - square // 8) * 60 if self.is_white_player else (square // 8) * 60
-            color = self.LIGHT_SQUARE_COLOR if (square + square // 8) % 2 == 0 else self.DARK_SQUARE_COLOR
 
-            # Highlight the last move
+            # Highlight the last move with the transparent image
             if square == self.highlight_last_move_from or square == self.highlight_last_move_to:
-                self.board_canvas.create_rectangle(x, y, x + 60, y + 60, fill="yellow", stipple="gray25")
+                self.board_canvas.create_image(x, y, image=self.highlight_image, anchor=tk.NW)
 
             piece = self.board.piece_at(square)
             if piece is not None:
