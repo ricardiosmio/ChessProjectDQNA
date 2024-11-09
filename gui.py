@@ -302,6 +302,14 @@ class ChessGUI:
                     self.engine_move()
                 self.reset_game()
                 logging.info(f"Game {i+1} ended")
+            
+            # Save the trained model after all games are played
+            self.save_model("models/trained_model.h5")
+
+    def save_model(self, file_path):
+        if not os.path.exists(os.path.dirname(file_path)):
+            os.makedirs(os.path.dirname(file_path))
+        self.agent.save_model(file_path)
 
 def main():
     root = tk.Tk()
