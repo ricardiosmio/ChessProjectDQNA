@@ -32,6 +32,18 @@ class ChessGUI:
         self.black_button = tk.Button(self.control_frame, text="Play as Black", command=self.play_black)
         self.black_button.pack(side=tk.TOP)
 
+        # Add the new game button
+        self.new_game_button = tk.Button(self.control_frame, text="New game", command=self.reset_game)
+        self.new_game_button.pack(side=tk.TOP)
+
+        # Add the undo button
+        self.undo_button = tk.Button(self.control_frame, text="Undo Move", command=self.undo_move)
+        self.undo_button.pack(side=tk.TOP)
+
+         # Add the move suggestion button
+        self.suggest_button = tk.Button(self.control_frame, text="Suggest Move", command=self.suggest_move)
+        self.suggest_button.pack(side=tk.TOP)
+
         self.move_history = tk.Text(self.control_frame, width=30, height=20, state=tk.DISABLED)
         self.move_history.pack(side=tk.TOP)
 
@@ -42,9 +54,35 @@ class ChessGUI:
         self.selected_square = None
         self.is_white_player = True  # By default, the player is white
         self.agent = DQNAgent((64, 12))  # Initialize the agent
+        self.highlight_last_move_from = None
+        self.highlight_last_move_to = None
         self.update_board()
 
         self.board_canvas.bind("<Button-1>", self.on_square_click)
+
+    def undo_move(self):
+        if self.board.move_stack:
+            self.board.pop()
+            self.update_board()
+            self.update_move_history()
+            self.status_label.config(text="")
+
+    def suggest_move(self):
+        suggested_move = self.agent.act(self.board)  # Use the chess engine to suggest a move
+        self.status_label.config(text=f"Suggested move: {suggested_move}")
+
+        # Highlight the suggested move
+        self.update_board(highlight_from=suggested_move.from_square, highlight_to=suggested_move.to_square)
+
+    def reset_game(self):
+        self.board = chess.Board()
+        self.highlight_last_move_from = None
+        self.highlight_last_move_to = None
+        self.update_board()
+        self.update_move_history()
+        self.status_label.config(text="")
+        if not self.is_white_player:
+            self.engine_move()
 
     def add_labels(self):
         self.row_labels = []
@@ -100,13 +138,28 @@ class ChessGUI:
         self.status_label.config(text="")
         self.engine_move()  # Engine makes the first move
 
-    def update_board(self):
+    def update_board(self, highlight_from=None, highlight_to=None):
+        print(f"Update board called with highlight_from={highlight_from}, highlight_to={highlight_to}, highlight_last_move_from={self.highlight_last_move_from}, highlight_last_move_to={self.highlight_last_move_to}")
         self.board_canvas.delete("all")
         for square in chess.SQUARES:
             x = (square % 8) * 60
             y = (7 - square // 8) * 60 if self.is_white_player else (square // 8) * 60
             color = self.LIGHT_SQUARE_COLOR if (square + square // 8) % 2 == 0 else self.DARK_SQUARE_COLOR
+
+            # Highlight the selected piece and destination square
+            if square == highlight_from or square == highlight_to:
+                color = "#FFFF00"  # Highlight color
+
             self.board_canvas.create_rectangle(x, y, x + 60, y + 60, fill=color)
+
+        for square in chess.SQUARES:
+            x = (square % 8) * 60
+            y = (7 - square // 8) * 60 if self.is_white_player else (square // 8) * 60
+            color = self.LIGHT_SQUARE_COLOR if (square + square // 8) % 2 == 0 else self.DARK_SQUARE_COLOR
+
+            # Highlight the last move
+            if square == self.highlight_last_move_from or square == self.highlight_last_move_to:
+                self.board_canvas.create_rectangle(x, y, x + 60, y + 60, fill="yellow", stipple="gray25")
 
             piece = self.board.piece_at(square)
             if piece is not None:
@@ -125,7 +178,11 @@ class ChessGUI:
             print(f"Selected square: {self.selected_square}")
             print(f"Legal moves: {list(self.board.legal_moves)}")
         else:
-            if self.board.piece_at(self.selected_square).piece_type == chess.PAWN and chess.square_rank(square) in [0, 7]:
+            piece = self.board.piece_at(self.selected_square)  # Retrieve the piece at the selected square
+            if piece and piece.piece_type == chess.PAWN and (
+                (piece.color == chess.WHITE and chess.square_rank(square) == 7) or 
+                (piece.color == chess.BLACK and chess.square_rank(square) == 0)
+            ):
                 self.promote_pawn(self.selected_square, square)
             else:
                 move = chess.Move(self.selected_square, square)
@@ -134,6 +191,8 @@ class ChessGUI:
                 if move in self.board.legal_moves:
                     print("Move is legal")
                     self.board.push(move)
+                    self.highlight_last_move_from = self.selected_square
+                    self.highlight_last_move_to = square
                     self.update_board()
                     self.update_move_history()
                     self.check_game_status()
@@ -142,13 +201,14 @@ class ChessGUI:
                     print("Illegal move, resetting selection")
 
             self.selected_square = None
+            self.update_board()
 
     def promote_pawn(self, from_square, to_square):
         x, y = self.root.winfo_pointerxy()
 
         promotion_window = tk.Toplevel(self.root)
         promotion_window.title("Promote Pawn")
-        promotion_window.geometry(f"200x100+{x}+{y}")
+        promotion_window.geometry(f"300x150+{x}+{y}")
 
         pawn_color = 'W' if self.board.piece_at(from_square).color == chess.WHITE else 'D'
         label = tk.Label(promotion_window, text="Promote pawn to:")
@@ -160,6 +220,8 @@ class ChessGUI:
             if move in self.board.legal_moves:
                 self.board.push(move)
                 promotion_window.destroy()
+                self.highlight_last_move_from = from_square
+                self.highlight_last_move_to = to_square
                 self.update_board()
                 self.update_move_history()
                 self.check_game_status()
@@ -204,22 +266,21 @@ class ChessGUI:
             self.status_label.config(text="Draw by insufficient material.")
         elif self.board.is_seventyfive_moves():
             self.status_label.config(text="Draw by 75-move rule.")
-        elif self.board.is_fivefold_repetition():
-            self.status_label.config(text="Draw by fivefold repetition.")
         elif self.board.is_variant_draw():
             self.status_label.config(text="Draw!")
 
     def engine_move(self):
-        encoded_board = encode_board(self.board)
-        best_move = self.agent.act(self.board)  # Use act instead of choose_action
-        if best_move:
-            print(f"Engine chose: {best_move}")
-            self.board.push(best_move)
+        if not self.board.is_game_over():
+            move = self.agent.act(self.board)
+            print(f"Engine move: {move}")
+            self.board.push(move)
+            self.highlight_last_move_from = move.from_square
+            self.highlight_last_move_to = move.to_square
             self.update_board()
             self.update_move_history()
             self.check_game_status()
         else:
-            print("Engine found no valid move")
+            self.check_game_status()
 
 def main():
     root = tk.Tk()

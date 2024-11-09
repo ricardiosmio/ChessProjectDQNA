@@ -2,6 +2,7 @@ import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
 
 import tkinter as tk
+from tkinter import simpledialog
 import chess
 from PIL import Image, ImageTk
 from chess_engine import DQNAgent, encode_board  # Import the engine
@@ -40,9 +41,13 @@ class ChessGUI:
         self.undo_button = tk.Button(self.control_frame, text="Undo Move", command=self.undo_move)
         self.undo_button.pack(side=tk.TOP)
 
-         # Add the move suggestion button
+        # Add the move suggestion button
         self.suggest_button = tk.Button(self.control_frame, text="Suggest Move", command=self.suggest_move)
         self.suggest_button.pack(side=tk.TOP)
+
+        # Add the play multiple games button
+        self.multi_game_button = tk.Button(self.control_frame, text="Play Multiple Games", command=self.play_multiple_games)
+        self.multi_game_button.pack(side=tk.TOP)
 
         self.move_history = tk.Text(self.control_frame, width=30, height=20, state=tk.DISABLED)
         self.move_history.pack(side=tk.TOP)
@@ -148,7 +153,6 @@ class ChessGUI:
         self.engine_move()  # Engine makes the first move
 
     def update_board(self, highlight_from=None, highlight_to=None):
-        print(f"Update board called with highlight_from={highlight_from}, highlight_to={highlight_to}, highlight_last_move_from={self.highlight_last_move_from}, highlight_last_move_to={self.highlight_last_move_to}")
         self.board_canvas.delete("all")
         for square in chess.SQUARES:
             x = (square % 8) * 60
@@ -183,8 +187,6 @@ class ChessGUI:
         if self.selected_square is None:
             self.selected_square = square
             self.highlight_moves(square)
-            print(f"Selected square: {self.selected_square}")
-            print(f"Legal moves: {list(self.board.legal_moves)}")
         else:
             piece = self.board.piece_at(self.selected_square)  # Retrieve the piece at the selected square
             if piece and piece.piece_type == chess.PAWN and (
@@ -194,10 +196,7 @@ class ChessGUI:
                 self.promote_pawn(self.selected_square, square)
             else:
                 move = chess.Move(self.selected_square, square)
-                print(f"Attempting move: {move}")
-
                 if move in self.board.legal_moves:
-                    print("Move is legal")
                     self.board.push(move)
                     self.highlight_last_move_from = self.selected_square
                     self.highlight_last_move_to = square
@@ -206,7 +205,7 @@ class ChessGUI:
                     self.check_game_status()
                     self.engine_move()
                 else:
-                    print("Illegal move, resetting selection")
+                    self.status_label.config(text="Illegal move, resetting selection")
 
             self.selected_square = None
             self.update_board()
@@ -235,7 +234,6 @@ class ChessGUI:
                 self.check_game_status()
                 self.engine_move()
             else:
-                print("Invalid promotion move")
                 promotion_window.destroy()
 
         tk.Button(promotion_window, text="Queen", command=lambda: set_promotion(chess.QUEEN)).pack(side=tk.LEFT)
@@ -280,7 +278,6 @@ class ChessGUI:
     def engine_move(self):
         if not self.board.is_game_over():
             move = self.agent.act(self.board)
-            print(f"Engine move: {move}")
             self.board.push(move)
             self.highlight_last_move_from = move.from_square
             self.highlight_last_move_to = move.to_square
@@ -289,6 +286,15 @@ class ChessGUI:
             self.check_game_status()
         else:
             self.check_game_status()
+
+    def play_multiple_games(self):
+        num_games = simpledialog.askinteger("Input", "How many games do you want to play?")
+        if num_games:
+            for _ in range(num_games):
+                self.play_white()
+                while not self.board.is_game_over():
+                    self.engine_move()
+                self.reset_game()
 
 def main():
     root = tk.Tk()
