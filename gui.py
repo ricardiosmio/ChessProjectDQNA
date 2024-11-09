@@ -54,6 +54,8 @@ class ChessGUI:
         self.selected_square = None
         self.is_white_player = True  # By default, the player is white
         self.agent = DQNAgent((64, 12))  # Initialize the agent
+        self.highlight_last_move_from = None
+        self.highlight_last_move_to = None
         self.update_board()
 
         self.board_canvas.bind("<Button-1>", self.on_square_click)
@@ -74,6 +76,8 @@ class ChessGUI:
 
     def reset_game(self):
         self.board = chess.Board()
+        self.highlight_last_move_from = None
+        self.highlight_last_move_to = None
         self.update_board()
         self.update_move_history()
         self.status_label.config(text="")
@@ -134,7 +138,8 @@ class ChessGUI:
         self.status_label.config(text="")
         self.engine_move()  # Engine makes the first move
 
-    def update_board(self, highlight_from=None, highlight_to=None, highlight_last_move_from=None, highlight_last_move_to=None):
+    def update_board(self, highlight_from=None, highlight_to=None):
+        print(f"Update board called with highlight_from={highlight_from}, highlight_to={highlight_to}, highlight_last_move_from={self.highlight_last_move_from}, highlight_last_move_to={self.highlight_last_move_to}")
         self.board_canvas.delete("all")
         for square in chess.SQUARES:
             x = (square % 8) * 60
@@ -153,7 +158,7 @@ class ChessGUI:
             color = self.LIGHT_SQUARE_COLOR if (square + square // 8) % 2 == 0 else self.DARK_SQUARE_COLOR
 
             # Highlight the last move
-            if square == highlight_last_move_from or square == highlight_last_move_to:
+            if square == self.highlight_last_move_from or square == self.highlight_last_move_to:
                 self.board_canvas.create_rectangle(x, y, x + 60, y + 60, fill="yellow", stipple="gray25")
 
             piece = self.board.piece_at(square)
@@ -186,6 +191,8 @@ class ChessGUI:
                 if move in self.board.legal_moves:
                     print("Move is legal")
                     self.board.push(move)
+                    self.highlight_last_move_from = self.selected_square
+                    self.highlight_last_move_to = square
                     self.update_board()
                     self.update_move_history()
                     self.check_game_status()
@@ -213,6 +220,8 @@ class ChessGUI:
             if move in self.board.legal_moves:
                 self.board.push(move)
                 promotion_window.destroy()
+                self.highlight_last_move_from = from_square
+                self.highlight_last_move_to = to_square
                 self.update_board()
                 self.update_move_history()
                 self.check_game_status()
@@ -257,16 +266,17 @@ class ChessGUI:
             self.status_label.config(text="Draw by insufficient material.")
         elif self.board.is_seventyfive_moves():
             self.status_label.config(text="Draw by 75-move rule.")
-        elif self.board.is_fivefold_repetition():
-            self.status_label.config(text="Draw by fivefold repetition.")
         elif self.board.is_variant_draw():
             self.status_label.config(text="Draw!")
 
     def engine_move(self):
         if not self.board.is_game_over():
             move = self.agent.act(self.board)
+            print(f"Engine move: {move}")
             self.board.push(move)
-            self.update_board(highlight_last_move_from=move.from_square, highlight_last_move_to=move.to_square)
+            self.highlight_last_move_from = move.from_square
+            self.highlight_last_move_to = move.to_square
+            self.update_board()
             self.update_move_history()
             self.check_game_status()
         else:
