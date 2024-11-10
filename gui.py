@@ -6,7 +6,7 @@ from tkinter import simpledialog
 import chess
 from PIL import Image, ImageTk
 from tensorflow.keras.models import load_model  # Add this import
-from chess_engine import DQNAgent, encode_board, get_most_trained_model  # Import the engine
+from chess_engine import AiEngine  # Import the engine
 import logging
 
 # Configure logging
@@ -63,20 +63,9 @@ class ChessGUI:
         self.piece_images = self.load_piece_images()
         self.selected_square = None
         self.is_white_player = True  # By default, the player is white
-        self.agent = DQNAgent((64, 12))  # Initialize the agent
         self.highlight_last_move_from = None
         self.highlight_last_move_to = None
         self.update_board()
-
-        # Load the most trained model
-        model_path = get_most_trained_model()
-        if model_path:
-            self.agent = DQNAgent(64, 12)
-            self.agent.model = load_model(model_path)
-            self.agent.target_model = self.agent.model
-            logging.info(f"Loaded model: {model_path}")  # Log the loaded model name
-        else:
-            raise ValueError("No trained model found. Please ensure a trained model is available.")
 
         self.board_canvas.bind("<Button-1>", self.on_square_click)
 

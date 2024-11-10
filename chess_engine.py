@@ -1,175 +1,141 @@
+import sys
+import math
 import chess
 import numpy as np
+import keras
 import tensorflow as tf
-physical_devices = tf.config.list_physical_devices('GPU')
-print("Num GPUs Available: ", len(physical_devices))
-from tensorflow.keras.models import Sequential, load_model, save_model
-from tensorflow.keras.layers import Dense, Flatten, Input
-from tensorflow.keras.optimizers import Adam
-from tensorflow.keras.losses import mse
-import random
-from collections import deque
-import os
-import logging
 
-logging.basicConfig(filename='training.log', level=logging.INFO, format='%(asctime)s - %(message)s')
+def inverse_sigmoid(x):
+    return -1 * math.log((1 / x) - 1)
 
-# Parameters
-GAMMA = 0.99
-ALPHA = 0.001
-MEMORY_SIZE = 100000
-BATCH_SIZE = 64
-EPSILON_DECAY = 0.995
-MIN_EPSILON = 0.01
-EPISODES = 10  # Number of games to play for training
+class SimpleChessEngine():
+    def __init__(self, board: chess.Board, depth=0):
+        self.board = board
+        self.depth = depth
+        self.recursive_calls = 0
+        self.evaluation_type = 'Material'
 
-# Register mse as a serializable function
-tf.keras.utils.register_keras_serializable()(mse)
+    def evaluate(self) -> int:
+        outcome = self.board.outcome()
+        if outcome != None:
+            if outcome.winner == None: return 0
+            if outcome.winner == self.board.turn: return 9000
+            if outcome.winner != self.board.turn: return -9000
 
-@tf.keras.utils.register_keras_serializable()
-def create_model(input_shape):
-    model = Sequential([
-        Input(shape=input_shape),
-        Flatten(),
-        Dense(128, activation='relu'),
-        Dense(64, activation='relu'),
-        Dense(1, activation='linear')
-    ])
-    model.compile(optimizer=Adam(learning_rate=ALPHA), loss='mse', metrics=['accuracy'])
-    return model
+        evaluation = 0
+        piece_value = {
+            chess.PAWN: 1, chess.KNIGHT: 3, chess.BISHOP: 3, 
+            chess.ROOK: 5, chess.QUEEN: 9, chess.KING: 0
+        }
 
-def encode_board(board):
-    encoded = np.zeros((64, 12), dtype=int)
-    piece_map = {
-        'P': 0, 'N': 1, 'B': 2, 'R': 3, 'Q': 4, 'K': 5,
-        'p': 6, 'n': 7, 'b': 8, 'r': 9, 'q': 10, 'k': 11
-    }
-    for square in chess.SQUARES:
-        piece = board.piece_at(square)
-        if piece:
-            piece_type = piece.symbol()
-            index = chess.square_rank(square) * 8 + chess.square_file(square)
-            encoded[index][piece_map[piece_type]] = 1
-    return encoded
+        for square in self.board.piece_map():
+            piece = self.board.piece_at(square)
+            if piece == None: continue
+            points = piece_value[piece.piece_type]
+            if piece.color == chess.BLACK:
+                points *= -1
+            evaluation += points
 
-def get_most_trained_model(directory='models'):
-    model_files = [f for f in os.listdir(directory) if f.endswith('.keras')]
-    if not model_files:
-        return None
-    model_files.sort(key=lambda f: int(f.split('_')[-1].split('.')[0]), reverse=True)
-    return os.path.join(directory, model_files[0])
+        perspective = 1 if self.board.turn == chess.WHITE else -1
+        return evaluation * perspective
 
-class DQNAgent:
-    def __init__(self, state_shape, start_games=100):
-        self.state_shape = state_shape
-        self.start_games = start_games
-        model_path = get_most_trained_model()
-        if model_path:
-            self.model = load_model(model_path)
-            self.model.compile(optimizer=Adam(learning_rate=ALPHA), loss='mse', metrics=['accuracy'])
-            self.model.evaluate(np.zeros((1, 64, 12)), np.zeros((1, 1)))  # Ensure metrics are compiled by evaluating the model
-        else:
-            raise ValueError("No trained model found. Please ensure a trained model is available.")
-        self.target_model = self.model
-        self.memory = deque(maxlen=MEMORY_SIZE)
-        
-        # Load epsilon value from file if it exists
-        self.epsilon = 1.0
-        epsilon_file = 'epsilon_value.txt'
-        if os.path.isfile(epsilon_file):
-            with open(epsilon_file, 'r') as f:
-                self.epsilon = float(f.read())
-                
-        self.epsilon_min = 0.01  # Minimum epsilon value
-        self.epsilon_decay = 0.995  # Decay rate for epsilon
+    def ordered_moves(self) -> list:
+        ordered_list = []
+        for move in self.board.legal_moves:
+            if move.drop != None or move.promotion != None:
+                ordered_list.insert(0, move)
+            else:
+                ordered_list.append(move)
+        return ordered_list
 
-    def remember(self, state, action, reward, next_state, done):
-        self.memory.append((state, action, reward, next_state, done))
+    def nega_max_alpha_beta(self, depth, alpha=-1 * sys.maxsize, beta=sys.maxsize):
+        self.recursive_calls += 1
+        if depth == 0 or self.ordered_moves() == []: return self.evaluate()
+        for move in self.ordered_moves():
+            self.board.push(move)
+            score = -1 * self.nega_max_alpha_beta(depth=depth-1, alpha=-1 * beta, beta=-1 * alpha)
+            self.board.pop()
+            if score >= beta:
+                return beta
+            if score > alpha:
+                alpha = score
+        return alpha
 
-    def act(self, state):
-        if np.random.rand() <= self.epsilon:
-            return random.choice(list(state.legal_moves))
-        q_values = []
+    def get_move(self) -> chess.Move:
+        self.recursive_calls = 0
         best_move = None
-        for move in state.legal_moves:
-            state.push(move)
-            q_value = self.model.predict(np.expand_dims(encode_board(state), axis=0))[0][0]
-            q_values.append(q_value)
-            if best_move is None or q_value > max(q_values):
+        max_eval = -1 * sys.maxsize
+        for move in self.ordered_moves():
+            self.board.push(move)
+            value = -1 * self.nega_max_alpha_beta(depth=self.depth)
+            self.board.pop()
+            if value >= max_eval:
                 best_move = move
-            state.pop()
-        return best_move
+                max_eval = value
+        return best_move, max_eval, self.recursive_calls
 
-    def replay(self):
-        if len(self.memory) < BATCH_SIZE:
-            return
-        batch = random.sample(self.memory, BATCH_SIZE)
-        for state, action, reward, next_state, done in batch:
-            target = reward
-            if not done:
-                target = reward + GAMMA * np.amax(self.target_model.predict(np.expand_dims(next_state, axis=0))[0])
-            target_f = self.model.predict(np.expand_dims(state, axis=0))
-            target_f[0][0] = target
-            self.model.fit(np.expand_dims(state, axis=0), target_f, epochs=1, verbose=0)
-        if self.epsilon > MIN_EPSILON:
-            self.epsilon *= EPSILON_DECAY
+class AiEngine(SimpleChessEngine):
+    def __init__(self, model: str, board: chess.Board, depth=0):
+        super().__init__(board, depth)
+        self.keras_model = keras.models.load_model(model)
+        self.evaluation_type = 'Neural Network Prediction (Keras)'
 
-    def update_target_model(self):
-        self.target_model.set_weights(self.model.get_weights())
+    def fen_to_image(self, fen_string: str) -> np.array:
+        piece_to_channel = {
+            'P': 0, 'N': 1, 'B': 2, 'R': 3, 'Q': 4, 'K': 5,
+            'p': 6, 'n': 7, 'b': 8, 'r': 9, 'q': 10, 'k': 11
+        }
+        image = np.zeros([8, 8, 12], dtype='float32')
+        parts = fen_string.split(" ")
+        fen_board = parts[0].split('/')
+        for i, row in enumerate(fen_board):
+            j = 0
+            for char in row:
+                if char in piece_to_channel:
+                    val = 1 if char.isupper() else -1
+                    image[i, j, piece_to_channel[char]] = val
+                    j += 1
+                else:
+                    j += int(char)
+        out = np.empty([1, 8, 8, 12])
+        out[0,] = image
+        return out
 
-    def save_model(self, filepath):
-        save_model(self.model, filepath)
+    def evaluate(self) -> float:
+        outcome = self.board.outcome()
+        if outcome != None:
+            if outcome.winner == None: return 0
+            if outcome.winner == self.board.turn: return 9000
+            if outcome.winner != self.board.turn: return -9000
+        fen = self.board.fen()
+        image = self.fen_to_image(fen)
+        prediction = self.keras_model.predict(image, verbose=0)[0][0]
+        evaluation = 100 * inverse_sigmoid(prediction)
+        perspective = 1 if self.board.turn == chess.WHITE else -1
+        return evaluation * perspective
 
-    def train_agent(self, num_games):
-        logging.info(f"Starting training session for {num_games} games")
-        for i in range(num_games):
-            logging.info(f"Game {i + 1} started")
-            board = chess.Board()
-            state = encode_board(board)
-            total_reward = 0
-            done = False
+class TFLiteEngine(AiEngine):
+    def __init__(self, model: str, board: chess.Board, depth=0):
+        super().__init__(model, board, depth)
+        self.evaluation_type = 'Neural Network Prediction (TfLite)'
+        converter = tf.lite.TFLiteConverter.from_saved_model(model)
+        tflite_model = converter.convert()
+        self.interpreter = tf.lite.Interpreter(model_content=tflite_model)
+        self.interpreter.allocate_tensors()
+        self.input_index = self.interpreter.get_input_details()[0]['index']
+        self.output_index = self.interpreter.get_output_details()[0]['index']
 
-            while not done:
-                action = self.act(board)
-                board.push(action)
-                reward = evaluate_board(board)
-                next_state = encode_board(board)
-                done = board.is_game_over()
-
-                self.remember(state, action, reward, next_state, done)
-                state = next_state
-                total_reward += reward
-
-                if done:
-                    self.update_target_model()
-                    logging.info(f"Game {i + 1} ended, Total Reward: {total_reward}, Epsilon: {self.epsilon}")
-                    break
-
-            self.replay()
-
-        # Save the updated epsilon value
-        with open('epsilon_value.txt', 'w') as f:
-            f.write(str(self.epsilon))
-
-        self.save_model(f"models/trained_model_{self.start_games + num_games}.keras")
-
-def evaluate_board(board):
-    if board.is_checkmate():
-        return 100 if board.turn == chess.BLACK else -100
-    piece_values = {
-        chess.PAWN: 1, chess.KNIGHT: 3, chess.BISHOP: 3,
-        chess.ROOK: 5, chess.QUEEN: 9, chess.KING: 10000
-    }
-    evaluation = 0
-    for square in chess.SQUARES:
-        piece = board.piece_at(square)
-        if piece:
-            value = piece_values.get(piece.piece_type, 0)
-            evaluation += value if piece.color == chess.WHITE else -value
-    return evaluation
-
-if __name__ == "__main__":
-    if not os.path.exists('models'):
-        os.makedirs('models')
-    agent = DQNAgent(state_shape=(64, 12))
-    agent.train_agent(EPISODES)
+    def evaluate(self) -> float:
+        outcome = self.board.outcome()
+        if outcome != None:
+            if outcome.winner == None: return 0
+            if outcome.winner == self.board.turn: return 9000
+            if outcome.winner != self.board.turn: return -9000
+        fen = self.board.fen()
+        input_data = np.float32(self.fen_to_image(fen))
+        self.interpreter.set_tensor(self.input_index, input_data)
+        self.interpreter.invoke()
+        prediction = self.interpreter.get_tensor(self.output_index)
+        evaluation = 100 * inverse_sigmoid(prediction)
+        perspective = 1 if self.board.turn == chess.WHITE else -1
+        return evaluation * perspective
