@@ -333,3 +333,1084 @@
 2024-11-09 21:16:00,775 - Game 2 ended, Total Reward: 1421, Epsilon: 0.6057704364907278
 2024-11-09 21:16:04,506 - Game 3 started
 2024-11-09 21:16:34,030 - Game 3 ended, Total Reward: -374, Epsilon: 0.6027415843082742
+2024-11-10 13:04:49,464 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNa/models/trained_model_100.keras
+2024-11-10 13:05:56,150 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:05:56,359 - Starting training session for 3590 games
+2024-11-10 13:05:56,359 - Game 1 started
+2024-11-10 13:06:30,696 - Game 1 ended, Total Reward: 2272, Epsilon: 0.5997278763867329
+2024-11-10 13:06:34,447 - Game 2 started
+2024-11-10 13:07:34,225 - Game 2 ended, Total Reward: 2920, Epsilon: 0.5967292370047992
+2024-11-10 13:07:37,986 - Game 3 started
+2024-11-10 13:08:36,248 - Game 3 ended, Total Reward: -953, Epsilon: 0.5937455908197752
+2024-11-10 13:08:39,897 - Game 4 started
+2024-11-10 13:09:29,712 - Game 4 ended, Total Reward: 923, Epsilon: 0.5907768628656763
+2024-11-10 13:09:33,343 - Game 5 started
+2024-11-10 13:10:33,294 - Game 5 ended, Total Reward: -2019, Epsilon: 0.5878229785513479
+2024-11-10 13:10:37,051 - Game 6 started
+2024-11-10 13:14:24,738 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:14:25,039 - Starting training session for 3590 games
+2024-11-10 13:14:25,039 - Game 1 started
+2024-11-10 13:15:14,035 - Game 1 ended, Total Reward: 1039, Epsilon: 0.5997278763867329
+2024-11-10 13:15:17,733 - Game 2 started
+2024-11-10 13:16:51,194 - Game 2 ended, Total Reward: 3575, Epsilon: 0.5967292370047992
+2024-11-10 13:16:56,964 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:16:57,178 - Starting training session for 3590 games
+2024-11-10 13:16:57,178 - Game 1 started
+2024-11-10 13:18:20,580 - Game 1 ended, Total Reward: 723, Epsilon: 0.5997278763867329
+2024-11-10 13:18:24,281 - Game 2 started
+2024-11-10 13:19:02,962 - Game 2 ended, Total Reward: -1842, Epsilon: 0.5967292370047992
+2024-11-10 13:19:06,780 - Game 3 started
+2024-11-10 13:20:52,191 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10.pgn
+2024-11-10 13:20:52,321 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:20:52,619 - Starting training session for 3590 games
+2024-11-10 13:20:52,619 - Game 1 started
+2024-11-10 13:21:48,771 - Game 1 ended, Total Reward: -716, Epsilon: 0.5997278763867329
+2024-11-10 13:21:52,474 - Game 2 started
+2024-11-10 13:22:43,509 - Game 2 ended, Total Reward: 1451, Epsilon: 0.5967292370047992
+2024-11-10 13:22:47,002 - Game 3 started
+2024-11-10 13:28:10,822 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10.pgn
+2024-11-10 13:28:10,951 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:32:58,211 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10.pgn
+2024-11-10 13:32:58,342 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:32:58,630 - Starting training session for 50 games from PGN files
+2024-11-10 13:32:58,630 - Starting training session for 50 games
+2024-11-10 13:32:58,630 - Game 1 started
+2024-11-10 13:34:12,980 - Game 1 ended, Total Reward: 785, Epsilon: 0.5997278763867329
+2024-11-10 13:34:16,629 - Game 2 started
+2024-11-10 13:35:01,200 - Game 2 ended, Total Reward: 398, Epsilon: 0.5967292370047992
+2024-11-10 13:35:04,819 - Game 3 started
+2024-11-10 13:36:26,114 - Game 3 ended, Total Reward: -841, Epsilon: 0.5937455908197752
+2024-11-10 13:36:29,691 - Game 4 started
+2024-11-10 13:37:26,208 - Game 4 ended, Total Reward: 1054, Epsilon: 0.5907768628656763
+2024-11-10 13:37:30,254 - Game 5 started
+2024-11-10 13:39:13,835 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10.pgn
+2024-11-10 13:39:13,964 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:40:43,490 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10.pgn
+2024-11-10 13:40:43,617 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:41:14,328 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10.pgn
+2024-11-10 13:41:14,456 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_100.keras
+2024-11-10 13:41:14,665 - Starting training session for 50 games from PGN files
+2024-11-10 13:41:14,665 - Starting training session for 50 games
+2024-11-10 13:41:14,665 - Game 1 started
+2024-11-10 13:41:29,346 - Game 1 ended, Total Reward: 199, Epsilon: 0.1
+2024-11-10 13:41:32,959 - Game 2 started
+2024-11-10 13:42:03,879 - Game 2 ended, Total Reward: 276, Epsilon: 0.0995
+2024-11-10 13:42:07,428 - Game 3 started
+2024-11-10 13:42:17,071 - Game 3 ended, Total Reward: 70, Epsilon: 0.09900250000000001
+2024-11-10 13:42:20,600 - Game 4 started
+2024-11-10 13:44:30,076 - Game 4 ended, Total Reward: 920, Epsilon: 0.0985074875
+2024-11-10 13:44:33,726 - Game 5 started
+2024-11-10 13:45:50,259 - Game 5 ended, Total Reward: 569, Epsilon: 0.09801495006250001
+2024-11-10 13:45:53,810 - Game 6 started
+2024-11-10 13:46:07,060 - Game 6 ended, Total Reward: 74, Epsilon: 0.09752487531218751
+2024-11-10 13:46:11,227 - Game 7 started
+2024-11-10 13:46:24,404 - Game 7 ended, Total Reward: 118, Epsilon: 0.09703725093562657
+2024-11-10 13:46:28,191 - Game 8 started
+2024-11-10 13:47:02,379 - Game 8 ended, Total Reward: 337, Epsilon: 0.09655206468094843
+2024-11-10 13:47:06,095 - Game 9 started
+2024-11-10 13:47:15,903 - Game 9 ended, Total Reward: 78, Epsilon: 0.09606930435754368
+2024-11-10 13:47:19,440 - Game 10 started
+2024-11-10 13:47:35,816 - Game 10 ended, Total Reward: 157, Epsilon: 0.09558895783575597
+2024-11-10 13:47:39,443 - Game 11 started
+2024-11-10 13:48:06,171 - Game 11 ended, Total Reward: 230, Epsilon: 0.09511101304657718
+2024-11-10 13:48:09,795 - Game 12 started
+2024-11-10 13:48:27,847 - Game 12 ended, Total Reward: 159, Epsilon: 0.09463545798134429
+2024-11-10 13:48:31,508 - Game 13 started
+2024-11-10 13:49:06,369 - Game 13 ended, Total Reward: 253, Epsilon: 0.09416228069143756
+2024-11-10 13:49:09,992 - Game 14 started
+2024-11-10 13:49:27,839 - Game 14 ended, Total Reward: 235, Epsilon: 0.09369146928798038
+2024-11-10 13:49:31,520 - Game 15 started
+2024-11-10 13:49:47,992 - Game 15 ended, Total Reward: 146, Epsilon: 0.09322301194154048
+2024-11-10 13:49:51,656 - Game 16 started
+2024-11-10 13:50:04,215 - Game 16 ended, Total Reward: 110, Epsilon: 0.09275689688183278
+2024-11-10 13:50:07,845 - Game 17 started
+2024-11-10 13:50:20,582 - Game 17 ended, Total Reward: 110, Epsilon: 0.09229311239742362
+2024-11-10 13:50:24,228 - Game 18 started
+2024-11-10 13:50:43,167 - Game 18 ended, Total Reward: 47, Epsilon: 0.0918316468354365
+2024-11-10 13:50:46,759 - Game 19 started
+2024-11-10 13:51:11,722 - Game 19 ended, Total Reward: -313, Epsilon: 0.09137248860125932
+2024-11-10 13:51:15,286 - Game 20 started
+2024-11-10 13:51:26,081 - Game 20 ended, Total Reward: 94, Epsilon: 0.09091562615825302
+2024-11-10 13:51:29,725 - Game 21 started
+2024-11-10 13:51:44,507 - Game 21 ended, Total Reward: 126, Epsilon: 0.09046104802746176
+2024-11-10 13:51:48,082 - Game 22 started
+2024-11-10 13:52:00,690 - Game 22 ended, Total Reward: 102, Epsilon: 0.09000874278732444
+2024-11-10 13:52:04,387 - Game 23 started
+2024-11-10 13:52:17,325 - Game 23 ended, Total Reward: 110, Epsilon: 0.08955869907338782
+2024-11-10 13:52:20,952 - Game 24 started
+2024-11-10 13:52:30,080 - Game 24 ended, Total Reward: 70, Epsilon: 0.08911090557802087
+2024-11-10 13:52:34,473 - Game 25 started
+2024-11-10 13:52:49,290 - Game 25 ended, Total Reward: 88, Epsilon: 0.08866535105013076
+2024-11-10 13:52:52,915 - Game 26 started
+2024-11-10 13:53:25,893 - Game 26 ended, Total Reward: 270, Epsilon: 0.08822202429488012
+2024-11-10 13:53:29,615 - Game 27 started
+2024-11-10 13:53:41,655 - Game 27 ended, Total Reward: 37, Epsilon: 0.08778091417340572
+2024-11-10 13:53:45,452 - Game 28 started
+2024-11-10 13:54:01,281 - Game 28 ended, Total Reward: 134, Epsilon: 0.0873420096025387
+2024-11-10 13:54:04,992 - Game 29 started
+2024-11-10 13:54:16,463 - Game 29 ended, Total Reward: 70, Epsilon: 0.086905299554526
+2024-11-10 13:54:20,642 - Game 30 started
+2024-11-10 13:54:41,024 - Game 30 ended, Total Reward: 166, Epsilon: 0.08647077305675337
+2024-11-10 13:54:45,652 - Game 31 started
+2024-11-10 13:55:07,354 - Game 31 ended, Total Reward: 310, Epsilon: 0.0860384191914696
+2024-11-10 13:55:10,970 - Game 32 started
+2024-11-10 13:55:40,067 - Game 32 ended, Total Reward: 218, Epsilon: 0.08560822709551225
+2024-11-10 13:55:44,235 - Game 33 started
+2024-11-10 13:55:53,221 - Game 33 ended, Total Reward: 74, Epsilon: 0.08518018596003468
+2024-11-10 13:55:56,948 - Game 34 started
+2024-11-10 13:56:24,435 - Game 34 ended, Total Reward: 219, Epsilon: 0.08475428503023451
+2024-11-10 13:56:28,255 - Game 35 started
+2024-11-10 13:56:47,053 - Game 35 ended, Total Reward: 170, Epsilon: 0.08433051360508334
+2024-11-10 13:56:50,677 - Game 36 started
+2024-11-10 13:57:02,229 - Game 36 ended, Total Reward: 94, Epsilon: 0.08390886103705793
+2024-11-10 13:57:05,869 - Game 37 started
+2024-11-10 13:57:21,156 - Game 37 ended, Total Reward: 126, Epsilon: 0.08348931673187264
+2024-11-10 13:57:24,969 - Game 38 started
+2024-11-10 13:57:34,062 - Game 38 ended, Total Reward: 70, Epsilon: 0.08307187014821328
+2024-11-10 13:57:37,901 - Game 39 started
+2024-11-10 13:57:59,800 - Game 39 ended, Total Reward: 92, Epsilon: 0.08265651079747222
+2024-11-10 13:58:04,418 - Game 40 started
+2024-11-10 13:58:23,059 - Game 40 ended, Total Reward: 166, Epsilon: 0.08224322824348486
+2024-11-10 13:58:26,727 - Game 41 started
+2024-11-10 13:58:45,772 - Game 41 ended, Total Reward: 174, Epsilon: 0.08183201210226744
+2024-11-10 13:58:49,639 - Game 42 started
+2024-11-10 13:59:04,393 - Game 42 ended, Total Reward: 122, Epsilon: 0.0814228520417561
+2024-11-10 13:59:08,324 - Game 43 started
+2024-11-10 13:59:18,185 - Game 43 ended, Total Reward: 70, Epsilon: 0.08101573778154732
+2024-11-10 13:59:21,877 - Game 44 started
+2024-11-10 13:59:37,385 - Game 44 ended, Total Reward: 126, Epsilon: 0.08061065909263958
+2024-11-10 13:59:41,138 - Game 45 started
+2024-11-10 13:59:59,108 - Game 45 ended, Total Reward: 130, Epsilon: 0.08020760579717638
+2024-11-10 14:00:02,969 - Game 46 started
+2024-11-10 14:00:21,174 - Game 46 ended, Total Reward: 253, Epsilon: 0.0798065677681905
+2024-11-10 14:00:25,255 - Game 47 started
+2024-11-10 14:00:38,048 - Game 47 ended, Total Reward: 98, Epsilon: 0.07940753492934956
+2024-11-10 14:00:42,055 - Game 48 started
+2024-11-10 14:01:00,433 - Game 48 ended, Total Reward: 41, Epsilon: 0.07901049725470281
+2024-11-10 14:01:05,203 - Game 49 started
+2024-11-10 14:01:48,545 - Game 49 ended, Total Reward: 308, Epsilon: 0.0786154447684293
+2024-11-10 14:01:52,221 - Game 50 started
+2024-11-10 14:02:06,038 - Game 50 ended, Total Reward: 102, Epsilon: 0.07822236754458715
+2024-11-10 14:02:09,746 - Model saved as /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/PGN50_trained_model_100.keras
+2024-11-10 14:02:53,374 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10.pgn
+2024-11-10 14:02:53,506 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_150.keras
+2024-11-10 14:02:53,711 - Starting training session for 50 games from PGN files
+2024-11-10 14:02:53,712 - Starting training session for 50 games
+2024-11-10 14:02:53,712 - Game 1 started
+2024-11-10 14:03:03,827 - Game 1 ended, Total Reward: 72, Epsilon: 0.07783125570686422
+2024-11-10 14:03:07,432 - Game 2 started
+2024-11-10 14:12:57,266 - Loaded model: models/trained_model_150.keras
+2024-11-10 14:15:27,030 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10 (6).pgn
+2024-11-10 14:15:27,169 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10 (7).pgn
+2024-11-10 14:15:27,310 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10 (1).pgn
+2024-11-10 14:15:27,445 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10.pgn
+2024-11-10 14:15:27,573 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10 (2).pgn
+2024-11-10 14:15:27,746 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10 (3).pgn
+2024-11-10 14:15:27,872 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10 (4).pgn
+2024-11-10 14:15:28,001 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10 (8).pgn
+2024-11-10 14:15:28,134 - Loaded 50 games from /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/PGN/chess_com_games_2024-11-10 (5).pgn
+2024-11-10 14:15:28,241 - Loaded model for training: /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/trained_model_150.keras
+2024-11-10 14:15:28,940 - Starting training session for 450 games from PGN files
+2024-11-10 14:15:28,941 - Starting training session for 450 games
+2024-11-10 14:15:28,941 - Game 1 started
+2024-11-10 14:15:38,784 - Game 1 ended, Total Reward: 78, Epsilon: 0.07783125570686422
+2024-11-10 14:15:42,510 - Game 2 started
+2024-11-10 14:16:39,407 - Game 2 ended, Total Reward: 655, Epsilon: 0.0774420994283299
+2024-11-10 14:16:42,971 - Game 3 started
+2024-11-10 14:16:54,953 - Game 3 ended, Total Reward: 114, Epsilon: 0.07705488893118825
+2024-11-10 14:16:58,533 - Game 4 started
+2024-11-10 14:17:25,050 - Game 4 ended, Total Reward: 313, Epsilon: 0.07666961448653231
+2024-11-10 14:17:28,588 - Game 5 started
+2024-11-10 14:17:37,430 - Game 5 ended, Total Reward: 70, Epsilon: 0.07628626641409965
+2024-11-10 14:17:41,060 - Game 6 started
+2024-11-10 14:18:06,115 - Game 6 ended, Total Reward: 241, Epsilon: 0.07590483508202915
+2024-11-10 14:18:09,761 - Game 7 started
+2024-11-10 14:18:24,053 - Game 7 ended, Total Reward: 114, Epsilon: 0.075525310906619
+2024-11-10 14:18:27,684 - Game 8 started
+2024-11-10 14:18:57,464 - Game 8 ended, Total Reward: 226, Epsilon: 0.07514768435208591
+2024-11-10 14:19:01,134 - Game 9 started
+2024-11-10 14:19:29,547 - Game 9 ended, Total Reward: 198, Epsilon: 0.07477194593032548
+2024-11-10 14:19:33,129 - Game 10 started
+2024-11-10 14:19:42,152 - Game 10 ended, Total Reward: 70, Epsilon: 0.07439808620067385
+2024-11-10 14:19:45,766 - Game 11 started
+2024-11-10 14:19:54,717 - Game 11 ended, Total Reward: 70, Epsilon: 0.07402609576967048
+2024-11-10 14:19:58,293 - Game 12 started
+2024-11-10 14:20:07,676 - Game 12 ended, Total Reward: 70, Epsilon: 0.07365596529082213
+2024-11-10 14:20:11,508 - Game 13 started
+2024-11-10 14:20:32,407 - Game 13 ended, Total Reward: 53, Epsilon: 0.07328768546436802
+2024-11-10 14:20:36,219 - Game 14 started
+2024-11-10 14:20:46,913 - Game 14 ended, Total Reward: 70, Epsilon: 0.07292124703704618
+2024-11-10 14:20:50,664 - Game 15 started
+2024-11-10 14:20:59,887 - Game 15 ended, Total Reward: 70, Epsilon: 0.07255664080186094
+2024-11-10 14:21:03,630 - Game 16 started
+2024-11-10 14:21:12,730 - Game 16 ended, Total Reward: 70, Epsilon: 0.07219385759785164
+2024-11-10 14:21:16,566 - Game 17 started
+2024-11-10 14:21:33,868 - Game 17 ended, Total Reward: 154, Epsilon: 0.07183288830986238
+2024-11-10 14:21:38,322 - Game 18 started
+2024-11-10 14:21:51,527 - Game 18 ended, Total Reward: 85, Epsilon: 0.07147372386831308
+2024-11-10 14:21:55,225 - Game 19 started
+2024-11-10 14:22:06,089 - Game 19 ended, Total Reward: 86, Epsilon: 0.07111635524897152
+2024-11-10 14:22:09,741 - Game 20 started
+2024-11-10 14:22:31,605 - Game 20 ended, Total Reward: 199, Epsilon: 0.07076077347272666
+2024-11-10 14:22:36,131 - Game 21 started
+2024-11-10 14:22:50,005 - Game 21 ended, Total Reward: 114, Epsilon: 0.07040696960536302
+2024-11-10 14:22:53,722 - Game 22 started
+2024-11-10 14:23:03,188 - Game 22 ended, Total Reward: 74, Epsilon: 0.0700549347573362
+2024-11-10 14:23:06,935 - Game 23 started
+2024-11-10 14:23:15,903 - Game 23 ended, Total Reward: 70, Epsilon: 0.06970466008354953
+2024-11-10 14:23:19,492 - Game 24 started
+2024-11-10 14:23:56,387 - Game 24 ended, Total Reward: 314, Epsilon: 0.06935613678313178
+2024-11-10 14:24:00,045 - Game 25 started
+2024-11-10 14:24:19,360 - Game 25 ended, Total Reward: 174, Epsilon: 0.06900935609921612
+2024-11-10 14:24:23,134 - Game 26 started
+2024-11-10 14:24:32,220 - Game 26 ended, Total Reward: 70, Epsilon: 0.06866430931872003
+2024-11-10 14:24:36,218 - Game 27 started
+2024-11-10 14:24:45,609 - Game 27 ended, Total Reward: 70, Epsilon: 0.06832098777212643
+2024-11-10 14:24:49,363 - Game 28 started
+2024-11-10 14:24:59,100 - Game 28 ended, Total Reward: 74, Epsilon: 0.0679793828332658
+2024-11-10 14:25:02,861 - Game 29 started
+2024-11-10 14:25:26,856 - Game 29 ended, Total Reward: 75, Epsilon: 0.06763948591909946
+2024-11-10 14:25:30,557 - Game 30 started
+2024-11-10 14:25:40,184 - Game 30 ended, Total Reward: 70, Epsilon: 0.06730128848950397
+2024-11-10 14:25:43,877 - Game 31 started
+2024-11-10 14:26:08,548 - Game 31 ended, Total Reward: 198, Epsilon: 0.06696478204705644
+2024-11-10 14:26:12,307 - Game 32 started
+2024-11-10 14:26:30,816 - Game 32 ended, Total Reward: 170, Epsilon: 0.06662995813682115
+2024-11-10 14:26:34,585 - Game 33 started
+2024-11-10 14:26:48,920 - Game 33 ended, Total Reward: 130, Epsilon: 0.06629680834613705
+2024-11-10 14:26:52,699 - Game 34 started
+2024-11-10 14:27:04,089 - Game 34 ended, Total Reward: 70, Epsilon: 0.06596532430440637
+2024-11-10 14:27:07,899 - Game 35 started
+2024-11-10 14:27:48,803 - Game 35 ended, Total Reward: 613, Epsilon: 0.06563549768288433
+2024-11-10 14:27:52,785 - Game 36 started
+2024-11-10 14:28:15,371 - Game 36 ended, Total Reward: 198, Epsilon: 0.06530732019446991
+2024-11-10 14:28:19,216 - Game 37 started
+2024-11-10 14:28:45,284 - Game 37 ended, Total Reward: 238, Epsilon: 0.06498078359349757
+2024-11-10 14:28:49,151 - Game 38 started
+2024-11-10 14:28:58,617 - Game 38 ended, Total Reward: 24, Epsilon: 0.06465587967553008
+2024-11-10 14:29:02,367 - Game 39 started
+2024-11-10 14:29:12,266 - Game 39 ended, Total Reward: 70, Epsilon: 0.06433260027715243
+2024-11-10 14:29:16,706 - Game 40 started
+2024-11-10 14:29:44,233 - Game 40 ended, Total Reward: 238, Epsilon: 0.06401093727576666
+2024-11-10 14:29:47,921 - Game 41 started
+2024-11-10 14:29:57,290 - Game 41 ended, Total Reward: 70, Epsilon: 0.06369088258938783
+2024-11-10 14:30:00,964 - Game 42 started
+2024-11-10 14:30:10,557 - Game 42 ended, Total Reward: 70, Epsilon: 0.0633724281764409
+2024-11-10 14:30:14,377 - Game 43 started
+2024-11-10 14:30:27,313 - Game 43 ended, Total Reward: 64, Epsilon: 0.06305556603555869
+2024-11-10 14:30:31,000 - Game 44 started
+2024-11-10 14:30:40,244 - Game 44 ended, Total Reward: 70, Epsilon: 0.0627402882053809
+2024-11-10 14:30:43,885 - Game 45 started
+2024-11-10 14:30:54,989 - Game 45 ended, Total Reward: 92, Epsilon: 0.062426586764353996
+2024-11-10 14:30:58,728 - Game 46 started
+2024-11-10 14:31:12,835 - Game 46 ended, Total Reward: 86, Epsilon: 0.062114453830532226
+2024-11-10 14:31:16,808 - Game 47 started
+2024-11-10 14:31:28,093 - Game 47 ended, Total Reward: 86, Epsilon: 0.061803881561379566
+2024-11-10 14:31:31,756 - Game 48 started
+2024-11-10 14:31:41,791 - Game 48 ended, Total Reward: 74, Epsilon: 0.061494862153572666
+2024-11-10 14:31:45,452 - Game 49 started
+2024-11-10 14:31:54,628 - Game 49 ended, Total Reward: 70, Epsilon: 0.0611873878428048
+2024-11-10 14:31:58,326 - Game 50 started
+2024-11-10 14:32:16,752 - Game 50 ended, Total Reward: 166, Epsilon: 0.060881450903590775
+2024-11-10 14:32:20,408 - Game 51 started
+2024-11-10 14:32:29,583 - Game 51 ended, Total Reward: 70, Epsilon: 0.06057704364907282
+2024-11-10 14:32:33,167 - Game 52 started
+2024-11-10 14:32:44,747 - Game 52 ended, Total Reward: 98, Epsilon: 0.06027415843082746
+2024-11-10 14:32:48,501 - Game 53 started
+2024-11-10 14:33:17,830 - Game 53 ended, Total Reward: 190, Epsilon: 0.05997278763867332
+2024-11-10 14:33:21,540 - Game 54 started
+2024-11-10 14:33:30,834 - Game 54 ended, Total Reward: 70, Epsilon: 0.059672923700479955
+2024-11-10 14:33:34,492 - Game 55 started
+2024-11-10 14:34:18,935 - Game 55 ended, Total Reward: 526, Epsilon: 0.05937455908197756
+2024-11-10 14:34:22,654 - Game 56 started
+2024-11-10 14:34:45,700 - Game 56 ended, Total Reward: 168, Epsilon: 0.05907768628656767
+2024-11-10 14:34:49,422 - Game 57 started
+2024-11-10 14:34:58,734 - Game 57 ended, Total Reward: 70, Epsilon: 0.05878229785513483
+2024-11-10 14:35:02,453 - Game 58 started
+2024-11-10 14:35:15,668 - Game 58 ended, Total Reward: 47, Epsilon: 0.05848838636585915
+2024-11-10 14:35:19,553 - Game 59 started
+2024-11-10 14:35:28,959 - Game 59 ended, Total Reward: 70, Epsilon: 0.05819594443402985
+2024-11-10 14:35:32,647 - Game 60 started
+2024-11-10 14:36:23,660 - Game 60 ended, Total Reward: 539, Epsilon: 0.057904964711859706
+2024-11-10 14:36:27,395 - Game 61 started
+2024-11-10 14:36:41,849 - Game 61 ended, Total Reward: 122, Epsilon: 0.05761543988830041
+2024-11-10 14:36:45,517 - Game 62 started
+2024-11-10 14:36:54,569 - Game 62 ended, Total Reward: 70, Epsilon: 0.05732736268885891
+2024-11-10 14:36:58,233 - Game 63 started
+2024-11-10 14:37:08,097 - Game 63 ended, Total Reward: 72, Epsilon: 0.05704072587541461
+2024-11-10 14:37:11,775 - Game 64 started
+2024-11-10 14:37:21,358 - Game 64 ended, Total Reward: 70, Epsilon: 0.05675552224603753
+2024-11-10 14:37:25,033 - Game 65 started
+2024-11-10 14:37:33,935 - Game 65 ended, Total Reward: 70, Epsilon: 0.05647174463480734
+2024-11-10 14:37:37,673 - Game 66 started
+2024-11-10 14:38:33,612 - Game 66 ended, Total Reward: 1175, Epsilon: 0.056189385911633305
+2024-11-10 14:38:37,375 - Game 67 started
+2024-11-10 14:38:46,758 - Game 67 ended, Total Reward: 70, Epsilon: 0.05590843898207514
+2024-11-10 14:38:50,464 - Game 68 started
+2024-11-10 14:39:00,199 - Game 68 ended, Total Reward: 70, Epsilon: 0.05562889678716477
+2024-11-10 14:39:03,843 - Game 69 started
+2024-11-10 14:39:19,763 - Game 69 ended, Total Reward: 134, Epsilon: 0.055350752303228945
+2024-11-10 14:39:23,557 - Game 70 started
+2024-11-10 14:39:33,085 - Game 70 ended, Total Reward: 70, Epsilon: 0.0550739985417128
+2024-11-10 14:39:36,953 - Game 71 started
+2024-11-10 14:39:50,766 - Game 71 ended, Total Reward: 114, Epsilon: 0.05479862854900423
+2024-11-10 14:39:54,514 - Game 72 started
+2024-11-10 14:40:03,853 - Game 72 ended, Total Reward: 70, Epsilon: 0.05452463540625921
+2024-11-10 14:40:07,633 - Game 73 started
+2024-11-10 14:40:17,026 - Game 73 ended, Total Reward: 70, Epsilon: 0.05425201222922791
+2024-11-10 14:40:20,897 - Game 74 started
+2024-11-10 14:40:30,574 - Game 74 ended, Total Reward: 70, Epsilon: 0.05398075216808177
+2024-11-10 14:45:31,630 - Game 75 started
+2024-11-10 14:45:55,602 - Game 75 ended, Total Reward: 230, Epsilon: 0.053710848407241364
+2024-11-10 14:45:59,285 - Game 76 started
+2024-11-10 14:46:11,083 - Game 76 ended, Total Reward: 98, Epsilon: 0.053442294165205156
+2024-11-10 14:47:02,766 - Game 77 started
+2024-11-10 14:47:13,507 - Game 77 ended, Total Reward: 70, Epsilon: 0.05317508269437913
+2024-11-10 14:47:17,347 - Game 78 started
+2024-11-10 14:47:27,591 - Game 78 ended, Total Reward: 74, Epsilon: 0.052909207280907235
+2024-11-10 14:47:31,348 - Game 79 started
+2024-11-10 14:47:40,132 - Game 79 ended, Total Reward: 70, Epsilon: 0.0526446612445027
+2024-11-10 14:47:43,915 - Game 80 started
+2024-11-10 14:47:53,600 - Game 80 ended, Total Reward: 70, Epsilon: 0.052381437938280186
+2024-11-10 14:47:57,465 - Game 81 started
+2024-11-10 14:48:09,486 - Game 81 ended, Total Reward: 98, Epsilon: 0.052119530748588785
+2024-11-10 14:48:13,171 - Game 82 started
+2024-11-10 14:48:22,964 - Game 82 ended, Total Reward: 70, Epsilon: 0.05185893309484584
+2024-11-10 14:48:26,625 - Game 83 started
+2024-11-10 14:48:41,578 - Game 83 ended, Total Reward: 129, Epsilon: 0.05159963842937161
+2024-11-10 14:48:45,389 - Game 84 started
+2024-11-10 14:48:54,091 - Game 84 ended, Total Reward: 70, Epsilon: 0.051341640237224755
+2024-11-10 14:48:57,813 - Game 85 started
+2024-11-10 14:49:07,784 - Game 85 ended, Total Reward: 70, Epsilon: 0.05108493203603863
+2024-11-10 14:49:11,537 - Game 86 started
+2024-11-10 14:49:22,026 - Game 86 ended, Total Reward: 113, Epsilon: 0.05082950737585844
+2024-11-10 14:49:25,731 - Game 87 started
+2024-11-10 14:49:37,484 - Game 87 ended, Total Reward: 82, Epsilon: 0.05057535983897914
+2024-11-10 14:49:41,242 - Game 88 started
+2024-11-10 14:49:50,846 - Game 88 ended, Total Reward: 70, Epsilon: 0.050322483039784247
+2024-11-10 14:49:54,556 - Game 89 started
+2024-11-10 14:50:04,023 - Game 89 ended, Total Reward: 70, Epsilon: 0.050070870624585324
+2024-11-10 14:50:07,817 - Game 90 started
+2024-11-10 14:50:34,935 - Game 90 ended, Total Reward: 226, Epsilon: 0.049820516271462396
+2024-11-10 14:50:38,699 - Game 91 started
+2024-11-10 14:50:48,741 - Game 91 ended, Total Reward: 78, Epsilon: 0.049571413690105086
+2024-11-10 14:50:52,544 - Game 92 started
+2024-11-10 14:51:04,427 - Game 92 ended, Total Reward: 226, Epsilon: 0.04932355662165456
+2024-11-10 14:51:08,172 - Game 93 started
+2024-11-10 14:51:21,072 - Game 93 ended, Total Reward: 106, Epsilon: 0.04907693883854629
+2024-11-10 14:51:24,900 - Game 94 started
+2024-11-10 14:52:04,916 - Game 94 ended, Total Reward: 546, Epsilon: 0.048831554144353556
+2024-11-10 14:52:08,634 - Game 95 started
+2024-11-10 14:52:21,278 - Game 95 ended, Total Reward: 102, Epsilon: 0.04858739637363179
+2024-11-10 14:52:25,122 - Game 96 started
+2024-11-10 14:52:34,566 - Game 96 ended, Total Reward: 70, Epsilon: 0.04834445939176363
+2024-11-10 14:52:38,427 - Game 97 started
+2024-11-10 14:53:05,444 - Game 97 ended, Total Reward: 210, Epsilon: 0.04810273709480481
+2024-11-10 14:53:09,202 - Game 98 started
+2024-11-10 14:53:23,427 - Game 98 ended, Total Reward: 106, Epsilon: 0.04786222340933079
+2024-11-10 14:53:27,248 - Game 99 started
+2024-11-10 14:53:36,721 - Game 99 ended, Total Reward: 70, Epsilon: 0.04762291229228413
+2024-11-10 14:53:40,443 - Game 100 started
+2024-11-10 14:54:03,751 - Game 100 ended, Total Reward: 174, Epsilon: 0.04738479773082271
+2024-11-10 14:54:07,548 - Game 101 started
+2024-11-10 14:54:17,184 - Game 101 ended, Total Reward: 70, Epsilon: 0.04714787374216859
+2024-11-10 14:54:21,042 - Game 102 started
+2024-11-10 14:54:30,551 - Game 102 ended, Total Reward: 70, Epsilon: 0.046912134373457745
+2024-11-10 14:54:34,357 - Game 103 started
+2024-11-10 14:54:44,041 - Game 103 ended, Total Reward: 70, Epsilon: 0.04667757370159046
+2024-11-10 14:54:48,127 - Game 104 started
+2024-11-10 14:55:09,279 - Game 104 ended, Total Reward: 142, Epsilon: 0.046444185833082505
+2024-11-10 14:55:13,562 - Game 105 started
+2024-11-10 14:55:23,882 - Game 105 ended, Total Reward: 70, Epsilon: 0.046211964903917095
+2024-11-10 14:55:27,986 - Game 106 started
+2024-11-10 14:55:38,746 - Game 106 ended, Total Reward: -69, Epsilon: 0.04598090507939751
+2024-11-10 14:55:43,182 - Game 107 started
+2024-11-10 14:55:53,955 - Game 107 ended, Total Reward: 70, Epsilon: 0.045751000554000526
+2024-11-10 14:55:58,143 - Game 108 started
+2024-11-10 14:56:08,294 - Game 108 ended, Total Reward: 70, Epsilon: 0.04552224555123052
+2024-11-10 14:56:12,344 - Game 109 started
+2024-11-10 14:56:24,115 - Game 109 ended, Total Reward: 90, Epsilon: 0.04529463432347437
+2024-11-10 14:56:28,286 - Game 110 started
+2024-11-10 14:56:40,653 - Game 110 ended, Total Reward: 94, Epsilon: 0.045068161151857
+2024-11-10 14:56:44,697 - Game 111 started
+2024-11-10 14:57:01,577 - Game 111 ended, Total Reward: 130, Epsilon: 0.04484282034609772
+2024-11-10 14:57:05,545 - Game 112 started
+2024-11-10 14:57:18,664 - Game 112 ended, Total Reward: 102, Epsilon: 0.04461860624436723
+2024-11-10 14:57:22,619 - Game 113 started
+2024-11-10 14:57:35,562 - Game 113 ended, Total Reward: -84, Epsilon: 0.044395513213145395
+2024-11-10 14:57:39,578 - Game 114 started
+2024-11-10 14:57:49,980 - Game 114 ended, Total Reward: 70, Epsilon: 0.04417353564707967
+2024-11-10 14:57:54,342 - Game 115 started
+2024-11-10 14:58:06,756 - Game 115 ended, Total Reward: 86, Epsilon: 0.04395266796884427
+2024-11-10 14:58:10,905 - Game 116 started
+2024-11-10 14:58:20,684 - Game 116 ended, Total Reward: 70, Epsilon: 0.04373290462900005
+2024-11-10 14:58:24,807 - Game 117 started
+2024-11-10 14:58:34,626 - Game 117 ended, Total Reward: 70, Epsilon: 0.04351424010585505
+2024-11-10 14:58:38,619 - Game 118 started
+2024-11-10 14:58:51,294 - Game 118 ended, Total Reward: 98, Epsilon: 0.043296668905325776
+2024-11-10 14:58:55,351 - Game 119 started
+2024-11-10 14:59:05,333 - Game 119 ended, Total Reward: 70, Epsilon: 0.04308018556079915
+2024-11-10 14:59:09,811 - Game 120 started
+2024-11-10 14:59:22,509 - Game 120 ended, Total Reward: 94, Epsilon: 0.04286478463299515
+2024-11-10 14:59:26,495 - Game 121 started
+2024-11-10 14:59:44,717 - Game 121 ended, Total Reward: 136, Epsilon: 0.042650460709830175
+2024-11-10 14:59:49,059 - Game 122 started
+2024-11-10 14:59:59,667 - Game 122 ended, Total Reward: 70, Epsilon: 0.04243720840628103
+2024-11-10 15:00:03,713 - Game 123 started
+2024-11-10 15:00:14,095 - Game 123 ended, Total Reward: 74, Epsilon: 0.042225022364249624
+2024-11-10 15:00:18,103 - Game 124 started
+2024-11-10 15:00:31,780 - Game 124 ended, Total Reward: 94, Epsilon: 0.04201389725242838
+2024-11-10 15:00:35,913 - Game 125 started
+2024-11-10 15:00:48,697 - Game 125 ended, Total Reward: 90, Epsilon: 0.041803827766166236
+2024-11-10 15:00:52,843 - Game 126 started
+2024-11-10 15:01:03,240 - Game 126 ended, Total Reward: 70, Epsilon: 0.0415948086273354
+2024-11-10 15:01:07,214 - Game 127 started
+2024-11-10 15:01:18,755 - Game 127 ended, Total Reward: 90, Epsilon: 0.04138683458419873
+2024-11-10 15:01:22,880 - Game 128 started
+2024-11-10 15:02:12,200 - Game 128 ended, Total Reward: 624, Epsilon: 0.04117990041127773
+2024-11-10 15:02:16,143 - Game 129 started
+2024-11-10 15:02:25,647 - Game 129 ended, Total Reward: 70, Epsilon: 0.04097400090922134
+2024-11-10 15:02:29,518 - Game 130 started
+2024-11-10 15:02:38,979 - Game 130 ended, Total Reward: 70, Epsilon: 0.04076913090467523
+2024-11-10 15:02:42,845 - Game 131 started
+2024-11-10 15:03:18,440 - Game 131 ended, Total Reward: 262, Epsilon: 0.04056528525015186
+2024-11-10 15:03:22,688 - Game 132 started
+2024-11-10 15:03:35,883 - Game 132 ended, Total Reward: 56, Epsilon: 0.0403624588239011
+2024-11-10 15:03:39,746 - Game 133 started
+2024-11-10 15:03:49,899 - Game 133 ended, Total Reward: 74, Epsilon: 0.04016064652978159
+2024-11-10 15:03:53,890 - Game 134 started
+2024-11-10 15:04:13,565 - Game 134 ended, Total Reward: 146, Epsilon: 0.03995984329713268
+2024-11-10 15:04:17,469 - Game 135 started
+2024-11-10 15:04:28,267 - Game 135 ended, Total Reward: 113, Epsilon: 0.03976004408064702
+2024-11-10 15:04:32,199 - Game 136 started
+2024-11-10 15:04:41,952 - Game 136 ended, Total Reward: -33, Epsilon: 0.03956124386024378
+2024-11-10 15:04:45,894 - Game 137 started
+2024-11-10 15:04:56,046 - Game 137 ended, Total Reward: 70, Epsilon: 0.039363437640942564
+2024-11-10 15:05:00,304 - Game 138 started
+2024-11-10 15:05:10,835 - Game 138 ended, Total Reward: 70, Epsilon: 0.03916662045273785
+2024-11-10 15:05:14,892 - Game 139 started
+2024-11-10 15:05:24,988 - Game 139 ended, Total Reward: 70, Epsilon: 0.03897078735047416
+2024-11-10 15:05:28,871 - Game 140 started
+2024-11-10 15:05:43,906 - Game 140 ended, Total Reward: 118, Epsilon: 0.03877593341372179
+2024-11-10 15:05:47,820 - Game 141 started
+2024-11-10 15:05:59,410 - Game 141 ended, Total Reward: 70, Epsilon: 0.03858205374665318
+2024-11-10 15:06:03,263 - Game 142 started
+2024-11-10 15:06:13,528 - Game 142 ended, Total Reward: 78, Epsilon: 0.03838914347791991
+2024-11-10 15:06:17,465 - Game 143 started
+2024-11-10 15:06:28,444 - Game 143 ended, Total Reward: 70, Epsilon: 0.038197197760530315
+2024-11-10 15:06:32,704 - Game 144 started
+2024-11-10 15:06:45,695 - Game 144 ended, Total Reward: 86, Epsilon: 0.038006211771727666
+2024-11-10 15:06:55,107 - Game 145 started
+2024-11-10 15:07:11,493 - Game 145 ended, Total Reward: 102, Epsilon: 0.037816180712869026
+2024-11-10 15:07:15,581 - Game 146 started
+2024-11-10 15:07:28,517 - Game 146 ended, Total Reward: 94, Epsilon: 0.03762709980930468
+2024-11-10 15:07:32,391 - Game 147 started
+2024-11-10 15:07:42,706 - Game 147 ended, Total Reward: 70, Epsilon: 0.03743896431025816
+2024-11-10 15:07:46,736 - Game 148 started
+2024-11-10 15:07:57,127 - Game 148 ended, Total Reward: 70, Epsilon: 0.037251769488706864
+2024-11-10 15:08:01,044 - Game 149 started
+2024-11-10 15:08:12,718 - Game 149 ended, Total Reward: 90, Epsilon: 0.03706551064126333
+2024-11-10 15:08:16,965 - Game 150 started
+2024-11-10 15:08:27,228 - Game 150 ended, Total Reward: 70, Epsilon: 0.03688018308805701
+2024-11-10 15:08:31,392 - Game 151 started
+2024-11-10 15:08:48,886 - Game 151 ended, Total Reward: 134, Epsilon: 0.03669578217261672
+2024-11-10 15:08:52,987 - Game 152 started
+2024-11-10 15:09:09,961 - Game 152 ended, Total Reward: 188, Epsilon: 0.036512303261753636
+2024-11-10 15:09:13,894 - Game 153 started
+2024-11-10 15:09:33,282 - Game 153 ended, Total Reward: 130, Epsilon: 0.036329741745444864
+2024-11-10 15:09:37,398 - Game 154 started
+2024-11-10 15:09:47,563 - Game 154 ended, Total Reward: 70, Epsilon: 0.03614809303671764
+2024-11-10 15:09:51,406 - Game 155 started
+2024-11-10 15:10:01,740 - Game 155 ended, Total Reward: 70, Epsilon: 0.03596735257153405
+2024-11-10 15:10:05,604 - Game 156 started
+2024-11-10 15:10:17,345 - Game 156 ended, Total Reward: 70, Epsilon: 0.03578751580867638
+2024-11-10 15:10:21,246 - Game 157 started
+2024-11-10 15:10:39,593 - Game 157 ended, Total Reward: 118, Epsilon: 0.035608578229633
+2024-11-10 15:10:43,494 - Game 158 started
+2024-11-10 15:10:55,806 - Game 158 ended, Total Reward: 141, Epsilon: 0.035430535338484836
+2024-11-10 15:10:59,845 - Game 159 started
+2024-11-10 15:11:12,314 - Game 159 ended, Total Reward: 98, Epsilon: 0.03525338266179241
+2024-11-10 15:11:16,124 - Game 160 started
+2024-11-10 15:11:39,659 - Game 160 ended, Total Reward: 190, Epsilon: 0.03507711574848345
+2024-11-10 15:11:43,606 - Game 161 started
+2024-11-10 15:11:56,120 - Game 161 ended, Total Reward: 82, Epsilon: 0.03490173016974103
+2024-11-10 15:12:00,080 - Game 162 started
+2024-11-10 15:12:10,943 - Game 162 ended, Total Reward: 82, Epsilon: 0.03472722151889233
+2024-11-10 15:12:15,005 - Game 163 started
+2024-11-10 15:12:24,933 - Game 163 ended, Total Reward: 70, Epsilon: 0.03455358541129787
+2024-11-10 15:12:28,855 - Game 164 started
+2024-11-10 15:12:38,876 - Game 164 ended, Total Reward: 70, Epsilon: 0.03438081748424138
+2024-11-10 15:12:42,890 - Game 165 started
+2024-11-10 15:12:52,913 - Game 165 ended, Total Reward: 70, Epsilon: 0.03420891339682017
+2024-11-10 15:12:56,946 - Game 166 started
+2024-11-10 15:13:07,124 - Game 166 ended, Total Reward: 70, Epsilon: 0.03403786882983607
+2024-11-10 15:13:11,231 - Game 167 started
+2024-11-10 15:13:27,632 - Game 167 ended, Total Reward: 70, Epsilon: 0.033867679485686884
+2024-11-10 15:13:31,573 - Game 168 started
+2024-11-10 15:13:41,445 - Game 168 ended, Total Reward: 70, Epsilon: 0.03369834108825845
+2024-11-10 15:13:45,464 - Game 169 started
+2024-11-10 15:13:57,816 - Game 169 ended, Total Reward: 70, Epsilon: 0.03352984938281715
+2024-11-10 15:14:01,749 - Game 170 started
+2024-11-10 15:14:11,974 - Game 170 ended, Total Reward: 70, Epsilon: 0.03336220013590307
+2024-11-10 15:14:15,842 - Game 171 started
+2024-11-10 15:14:25,269 - Game 171 ended, Total Reward: 70, Epsilon: 0.03319538913522355
+2024-11-10 15:14:28,963 - Game 172 started
+2024-11-10 15:14:39,307 - Game 172 ended, Total Reward: 70, Epsilon: 0.033029412189547434
+2024-11-10 15:14:43,091 - Game 173 started
+2024-11-10 15:14:52,258 - Game 173 ended, Total Reward: 70, Epsilon: 0.0328642651285997
+2024-11-10 15:14:56,234 - Game 174 started
+2024-11-10 15:15:06,758 - Game 174 ended, Total Reward: 70, Epsilon: 0.032699943802956696
+2024-11-10 15:15:10,586 - Game 175 started
+2024-11-10 15:15:20,394 - Game 175 ended, Total Reward: 70, Epsilon: 0.032536444083941914
+2024-11-10 15:15:24,429 - Game 176 started
+2024-11-10 15:15:34,873 - Game 176 ended, Total Reward: 70, Epsilon: 0.032373761863522206
+2024-11-10 15:15:38,723 - Game 177 started
+2024-11-10 15:16:01,125 - Game 177 ended, Total Reward: 182, Epsilon: 0.0322118930542046
+2024-11-10 15:16:04,982 - Game 178 started
+2024-11-10 15:16:14,814 - Game 178 ended, Total Reward: 70, Epsilon: 0.032050833588933576
+2024-11-10 15:16:18,877 - Game 179 started
+2024-11-10 15:16:32,827 - Game 179 ended, Total Reward: 110, Epsilon: 0.031890579420988906
+2024-11-10 15:16:36,621 - Game 180 started
+2024-11-10 15:16:46,812 - Game 180 ended, Total Reward: 70, Epsilon: 0.03173112652388396
+2024-11-10 15:16:50,784 - Game 181 started
+2024-11-10 15:17:00,877 - Game 181 ended, Total Reward: 74, Epsilon: 0.03157247089126454
+2024-11-10 15:17:05,107 - Game 182 started
+2024-11-10 15:17:15,204 - Game 182 ended, Total Reward: 70, Epsilon: 0.03141460853680822
+2024-11-10 15:17:19,923 - Game 183 started
+2024-11-10 15:17:34,756 - Game 183 ended, Total Reward: 116, Epsilon: 0.031257535494124175
+2024-11-10 15:17:38,876 - Game 184 started
+2024-11-10 15:17:55,382 - Game 184 ended, Total Reward: 122, Epsilon: 0.031101247816653552
+2024-11-10 15:17:59,323 - Game 185 started
+2024-11-10 15:18:11,085 - Game 185 ended, Total Reward: 70, Epsilon: 0.030945741577570286
+2024-11-10 15:18:15,336 - Game 186 started
+2024-11-10 15:18:25,179 - Game 186 ended, Total Reward: 70, Epsilon: 0.030791012869682433
+2024-11-10 15:18:29,010 - Game 187 started
+2024-11-10 15:18:38,914 - Game 187 ended, Total Reward: 70, Epsilon: 0.03063705780533402
+2024-11-10 15:18:42,767 - Game 188 started
+2024-11-10 15:18:51,981 - Game 188 ended, Total Reward: 70, Epsilon: 0.03048387251630735
+2024-11-10 15:18:55,939 - Game 189 started
+2024-11-10 15:19:09,018 - Game 189 ended, Total Reward: 98, Epsilon: 0.03033145315372581
+2024-11-10 15:19:13,029 - Game 190 started
+2024-11-10 15:19:23,441 - Game 190 ended, Total Reward: 70, Epsilon: 0.030179795887957182
+2024-11-10 15:19:27,652 - Game 191 started
+2024-11-10 15:19:37,631 - Game 191 ended, Total Reward: 70, Epsilon: 0.030028896908517396
+2024-11-10 15:19:41,442 - Game 192 started
+2024-11-10 15:20:01,998 - Game 192 ended, Total Reward: 150, Epsilon: 0.029878752423974808
+2024-11-10 15:20:05,826 - Game 193 started
+2024-11-10 15:20:15,650 - Game 193 ended, Total Reward: 70, Epsilon: 0.029729358661854933
+2024-11-10 15:20:19,684 - Game 194 started
+2024-11-10 15:20:29,857 - Game 194 ended, Total Reward: 70, Epsilon: 0.029580711868545658
+2024-11-10 15:20:33,867 - Game 195 started
+2024-11-10 15:20:43,915 - Game 195 ended, Total Reward: 70, Epsilon: 0.02943280830920293
+2024-11-10 15:20:47,963 - Game 196 started
+2024-11-10 15:21:05,335 - Game 196 ended, Total Reward: 114, Epsilon: 0.029285644267656914
+2024-11-10 15:21:09,116 - Game 197 started
+2024-11-10 15:21:20,650 - Game 197 ended, Total Reward: 82, Epsilon: 0.02913921604631863
+2024-11-10 15:21:25,164 - Game 198 started
+2024-11-10 15:21:34,854 - Game 198 ended, Total Reward: 70, Epsilon: 0.028993519966087036
+2024-11-10 15:21:38,857 - Game 199 started
+2024-11-10 15:21:48,887 - Game 199 ended, Total Reward: 70, Epsilon: 0.0288485523662566
+2024-11-10 15:21:53,007 - Game 200 started
+2024-11-10 15:22:02,244 - Game 200 ended, Total Reward: 70, Epsilon: 0.028704309604425316
+2024-11-10 15:22:06,199 - Game 201 started
+2024-11-10 15:22:27,179 - Game 201 ended, Total Reward: 182, Epsilon: 0.028560788056403188
+2024-11-10 15:22:31,208 - Game 202 started
+2024-11-10 15:22:41,405 - Game 202 ended, Total Reward: 70, Epsilon: 0.028417984116121172
+2024-11-10 15:22:45,287 - Game 203 started
+2024-11-10 15:23:16,293 - Game 203 ended, Total Reward: -189, Epsilon: 0.028275894195540566
+2024-11-10 15:23:20,454 - Game 204 started
+2024-11-10 15:23:32,187 - Game 204 ended, Total Reward: 70, Epsilon: 0.028134514724562864
+2024-11-10 15:23:36,779 - Game 205 started
+2024-11-10 15:23:52,497 - Game 205 ended, Total Reward: 70, Epsilon: 0.02799384215094005
+2024-11-10 15:23:56,389 - Game 206 started
+2024-11-10 15:24:28,928 - Game 206 ended, Total Reward: 210, Epsilon: 0.027853872940185348
+2024-11-10 15:24:37,313 - Game 207 started
+2024-11-10 15:24:47,959 - Game 207 ended, Total Reward: 70, Epsilon: 0.02771460357548442
+2024-11-10 15:24:51,909 - Game 208 started
+2024-11-10 15:25:02,113 - Game 208 ended, Total Reward: 70, Epsilon: 0.027576030557607
+2024-11-10 15:25:06,676 - Game 209 started
+2024-11-10 15:25:18,893 - Game 209 ended, Total Reward: 82, Epsilon: 0.027438150404818965
+2024-11-10 15:25:22,736 - Game 210 started
+2024-11-10 15:25:35,835 - Game 210 ended, Total Reward: 98, Epsilon: 0.02730095965279487
+2024-11-10 15:25:40,230 - Game 211 started
+2024-11-10 15:25:55,256 - Game 211 ended, Total Reward: 118, Epsilon: 0.027164454854530895
+2024-11-10 15:25:59,418 - Game 212 started
+2024-11-10 15:26:09,066 - Game 212 ended, Total Reward: 70, Epsilon: 0.02702863258025824
+2024-11-10 15:26:13,500 - Game 213 started
+2024-11-10 15:26:23,359 - Game 213 ended, Total Reward: 70, Epsilon: 0.02689348941735695
+2024-11-10 15:26:27,584 - Game 214 started
+2024-11-10 15:26:40,633 - Game 214 ended, Total Reward: 102, Epsilon: 0.026759021970270167
+2024-11-10 15:26:45,168 - Game 215 started
+2024-11-10 15:26:55,507 - Game 215 ended, Total Reward: 70, Epsilon: 0.026625226860418818
+2024-11-10 15:26:59,400 - Game 216 started
+2024-11-10 15:27:16,255 - Game 216 ended, Total Reward: 70, Epsilon: 0.026492100726116723
+2024-11-10 15:27:20,462 - Game 217 started
+2024-11-10 15:27:32,922 - Game 217 ended, Total Reward: 90, Epsilon: 0.02635964022248614
+2024-11-10 15:27:37,154 - Game 218 started
+2024-11-10 15:28:00,693 - Game 218 ended, Total Reward: 186, Epsilon: 0.02622784202137371
+2024-11-10 15:28:04,527 - Game 219 started
+2024-11-10 15:28:15,236 - Game 219 ended, Total Reward: 70, Epsilon: 0.02609670281126684
+2024-11-10 15:28:19,249 - Game 220 started
+2024-11-10 15:28:28,933 - Game 220 ended, Total Reward: 70, Epsilon: 0.02596621929721051
+2024-11-10 15:28:32,720 - Game 221 started
+2024-11-10 15:28:43,144 - Game 221 ended, Total Reward: 70, Epsilon: 0.025836388200724456
+2024-11-10 15:28:47,654 - Game 222 started
+2024-11-10 15:29:00,174 - Game 222 ended, Total Reward: 98, Epsilon: 0.025707206259720835
+2024-11-10 15:29:04,120 - Game 223 started
+2024-11-10 15:29:14,282 - Game 223 ended, Total Reward: 70, Epsilon: 0.02557867022842223
+2024-11-10 15:29:18,680 - Game 224 started
+2024-11-10 15:29:32,077 - Game 224 ended, Total Reward: 110, Epsilon: 0.025450776877280118
+2024-11-10 15:29:36,075 - Game 225 started
+2024-11-10 15:30:00,110 - Game 225 ended, Total Reward: 174, Epsilon: 0.025323522992893716
+2024-11-10 15:30:04,482 - Game 226 started
+2024-11-10 15:30:14,538 - Game 226 ended, Total Reward: 70, Epsilon: 0.02519690537792925
+2024-11-10 15:30:18,354 - Game 227 started
+2024-11-10 15:30:28,484 - Game 227 ended, Total Reward: 70, Epsilon: 0.025070920851039603
+2024-11-10 15:30:32,638 - Game 228 started
+2024-11-10 15:30:46,834 - Game 228 ended, Total Reward: 106, Epsilon: 0.024945566246784404
+2024-11-10 15:30:50,775 - Game 229 started
+2024-11-10 15:31:01,714 - Game 229 ended, Total Reward: 70, Epsilon: 0.02482083841555048
+2024-11-10 15:31:06,129 - Game 230 started
+2024-11-10 15:31:16,066 - Game 230 ended, Total Reward: 70, Epsilon: 0.024696734223472728
+2024-11-10 15:31:19,941 - Game 231 started
+2024-11-10 15:31:33,240 - Game 231 ended, Total Reward: 86, Epsilon: 0.024573250552355364
+2024-11-10 15:31:37,287 - Game 232 started
+2024-11-10 15:31:46,825 - Game 232 ended, Total Reward: 70, Epsilon: 0.024450384299593588
+2024-11-10 15:31:50,894 - Game 233 started
+2024-11-10 15:32:01,108 - Game 233 ended, Total Reward: 70, Epsilon: 0.02432813237809562
+2024-11-10 15:32:05,540 - Game 234 started
+2024-11-10 15:32:19,681 - Game 234 ended, Total Reward: 106, Epsilon: 0.02420649171620514
+2024-11-10 15:32:23,738 - Game 235 started
+2024-11-10 15:32:33,206 - Game 235 ended, Total Reward: 70, Epsilon: 0.024085459257624113
+2024-11-10 15:32:37,366 - Game 236 started
+2024-11-10 15:32:47,256 - Game 236 ended, Total Reward: 70, Epsilon: 0.02396503196133599
+2024-11-10 15:32:51,357 - Game 237 started
+2024-11-10 15:33:01,112 - Game 237 ended, Total Reward: 70, Epsilon: 0.023845206801529312
+2024-11-10 15:33:04,929 - Game 238 started
+2024-11-10 15:33:15,072 - Game 238 ended, Total Reward: 70, Epsilon: 0.023725980767521665
+2024-11-10 15:33:19,205 - Game 239 started
+2024-11-10 15:33:29,130 - Game 239 ended, Total Reward: 70, Epsilon: 0.023607350863684057
+2024-11-10 15:33:32,965 - Game 240 started
+2024-11-10 15:33:43,048 - Game 240 ended, Total Reward: 70, Epsilon: 0.02348931410936564
+2024-11-10 15:33:47,022 - Game 241 started
+2024-11-10 15:33:56,991 - Game 241 ended, Total Reward: 70, Epsilon: 0.02337186753881881
+2024-11-10 15:34:00,777 - Game 242 started
+2024-11-10 15:34:10,576 - Game 242 ended, Total Reward: 70, Epsilon: 0.023255008201124715
+2024-11-10 15:34:15,122 - Game 243 started
+2024-11-10 15:34:24,748 - Game 243 ended, Total Reward: 70, Epsilon: 0.02313873316011909
+2024-11-10 15:34:28,671 - Game 244 started
+2024-11-10 15:34:38,778 - Game 244 ended, Total Reward: 70, Epsilon: 0.023023039494318494
+2024-11-10 15:34:42,900 - Game 245 started
+2024-11-10 15:34:57,548 - Game 245 ended, Total Reward: 118, Epsilon: 0.0229079242968469
+2024-11-10 15:35:01,729 - Game 246 started
+2024-11-10 15:35:14,004 - Game 246 ended, Total Reward: 98, Epsilon: 0.022793384675362665
+2024-11-10 15:35:18,089 - Game 247 started
+2024-11-10 15:35:28,209 - Game 247 ended, Total Reward: 70, Epsilon: 0.022679417751985852
+2024-11-10 15:35:32,520 - Game 248 started
+2024-11-10 15:35:43,085 - Game 248 ended, Total Reward: 70, Epsilon: 0.022566020663225925
+2024-11-10 15:35:46,799 - Game 249 started
+2024-11-10 15:35:56,440 - Game 249 ended, Total Reward: 70, Epsilon: 0.022453190559909793
+2024-11-10 15:36:00,451 - Game 250 started
+2024-11-10 15:36:10,243 - Game 250 ended, Total Reward: 70, Epsilon: 0.022340924607110246
+2024-11-10 15:36:14,205 - Game 251 started
+2024-11-10 15:36:23,939 - Game 251 ended, Total Reward: 70, Epsilon: 0.022229219984074695
+2024-11-10 15:36:27,873 - Game 252 started
+2024-11-10 15:36:37,519 - Game 252 ended, Total Reward: 70, Epsilon: 0.02211807388415432
+2024-11-10 15:36:41,242 - Game 253 started
+2024-11-10 15:36:52,116 - Game 253 ended, Total Reward: 70, Epsilon: 0.02200748351473355
+2024-11-10 15:36:56,319 - Game 254 started
+2024-11-10 15:37:15,593 - Game 254 ended, Total Reward: 150, Epsilon: 0.021897446097159882
+2024-11-10 15:37:20,134 - Game 255 started
+2024-11-10 15:37:30,212 - Game 255 ended, Total Reward: 70, Epsilon: 0.021787958866674083
+2024-11-10 15:37:33,926 - Game 256 started
+2024-11-10 15:37:43,587 - Game 256 ended, Total Reward: 70, Epsilon: 0.021679019072340714
+2024-11-10 15:37:47,666 - Game 257 started
+2024-11-10 15:38:02,287 - Game 257 ended, Total Reward: 114, Epsilon: 0.02157062397697901
+2024-11-10 15:38:06,029 - Game 258 started
+2024-11-10 15:38:16,194 - Game 258 ended, Total Reward: 70, Epsilon: 0.021462770857094114
+2024-11-10 15:38:20,056 - Game 259 started
+2024-11-10 15:38:29,832 - Game 259 ended, Total Reward: 70, Epsilon: 0.021355457002808644
+2024-11-10 15:38:33,792 - Game 260 started
+2024-11-10 15:38:44,056 - Game 260 ended, Total Reward: 70, Epsilon: 0.0212486797177946
+2024-11-10 15:38:48,046 - Game 261 started
+2024-11-10 15:38:59,093 - Game 261 ended, Total Reward: 70, Epsilon: 0.021142436319205628
+2024-11-10 15:39:03,154 - Game 262 started
+2024-11-10 15:39:13,676 - Game 262 ended, Total Reward: 70, Epsilon: 0.0210367241376096
+2024-11-10 15:39:17,738 - Game 263 started
+2024-11-10 15:39:30,573 - Game 263 ended, Total Reward: 98, Epsilon: 0.020931540516921553
+2024-11-10 15:39:34,837 - Game 264 started
+2024-11-10 15:39:49,575 - Game 264 ended, Total Reward: 118, Epsilon: 0.020826882814336947
+2024-11-10 15:39:53,402 - Game 265 started
+2024-11-10 15:40:04,302 - Game 265 ended, Total Reward: 70, Epsilon: 0.02072274840026526
+2024-11-10 15:40:08,515 - Game 266 started
+2024-11-10 15:40:18,619 - Game 266 ended, Total Reward: 70, Epsilon: 0.020619134658263934
+2024-11-10 15:40:22,570 - Game 267 started
+2024-11-10 15:40:32,886 - Game 267 ended, Total Reward: 70, Epsilon: 0.020516038984972614
+2024-11-10 15:40:37,227 - Game 268 started
+2024-11-10 15:40:47,511 - Game 268 ended, Total Reward: 70, Epsilon: 0.020413458790047752
+2024-11-10 15:40:51,700 - Game 269 started
+2024-11-10 15:41:22,566 - Game 269 ended, Total Reward: 234, Epsilon: 0.020311391496097512
+2024-11-10 15:41:26,664 - Game 270 started
+2024-11-10 15:41:40,432 - Game 270 ended, Total Reward: 102, Epsilon: 0.020209834538617025
+2024-11-10 15:41:44,525 - Game 271 started
+2024-11-10 15:41:57,481 - Game 271 ended, Total Reward: 70, Epsilon: 0.02010878536592394
+2024-11-10 15:42:01,622 - Game 272 started
+2024-11-10 15:42:11,455 - Game 272 ended, Total Reward: 70, Epsilon: 0.020008241439094323
+2024-11-10 15:42:15,259 - Game 273 started
+2024-11-10 15:42:25,708 - Game 273 ended, Total Reward: 70, Epsilon: 0.01990820023189885
+2024-11-10 15:42:29,526 - Game 274 started
+2024-11-10 15:42:43,599 - Game 274 ended, Total Reward: 106, Epsilon: 0.019808659230739357
+2024-11-10 15:42:47,700 - Game 275 started
+2024-11-10 15:42:57,756 - Game 275 ended, Total Reward: 70, Epsilon: 0.019709615934585662
+2024-11-10 15:43:02,032 - Game 276 started
+2024-11-10 15:43:12,217 - Game 276 ended, Total Reward: 70, Epsilon: 0.019611067854912734
+2024-11-10 15:43:16,417 - Game 277 started
+2024-11-10 15:43:28,720 - Game 277 ended, Total Reward: 70, Epsilon: 0.01951301251563817
+2024-11-10 15:43:32,702 - Game 278 started
+2024-11-10 15:43:43,396 - Game 278 ended, Total Reward: 70, Epsilon: 0.01941544745305998
+2024-11-10 15:43:49,212 - Game 279 started
+2024-11-10 15:44:05,017 - Game 279 ended, Total Reward: 70, Epsilon: 0.019318370215794682
+2024-11-10 15:44:08,936 - Game 280 started
+2024-11-10 15:44:20,220 - Game 280 ended, Total Reward: 70, Epsilon: 0.019221778364715707
+2024-11-10 15:44:24,267 - Game 281 started
+2024-11-10 15:44:33,864 - Game 281 ended, Total Reward: 70, Epsilon: 0.01912566947289213
+2024-11-10 15:44:37,563 - Game 282 started
+2024-11-10 15:44:47,544 - Game 282 ended, Total Reward: 70, Epsilon: 0.01903004112552767
+2024-11-10 15:44:51,355 - Game 283 started
+2024-11-10 15:45:03,250 - Game 283 ended, Total Reward: 94, Epsilon: 0.01893489091990003
+2024-11-10 15:45:07,102 - Game 284 started
+2024-11-10 15:45:17,630 - Game 284 ended, Total Reward: 70, Epsilon: 0.01884021646530053
+2024-11-10 15:45:21,442 - Game 285 started
+2024-11-10 15:45:30,721 - Game 285 ended, Total Reward: 70, Epsilon: 0.01874601538297403
+2024-11-10 15:45:34,563 - Game 286 started
+2024-11-10 15:45:44,635 - Game 286 ended, Total Reward: 70, Epsilon: 0.01865228530605916
+2024-11-10 15:45:48,392 - Game 287 started
+2024-11-10 15:45:57,972 - Game 287 ended, Total Reward: 70, Epsilon: 0.018559023879528864
+2024-11-10 15:46:03,441 - Game 288 started
+2024-11-10 15:46:16,081 - Game 288 ended, Total Reward: 86, Epsilon: 0.01846622876013122
+2024-11-10 15:46:20,415 - Game 289 started
+2024-11-10 15:46:31,457 - Game 289 ended, Total Reward: 70, Epsilon: 0.018373897616330563
+2024-11-10 15:46:36,277 - Game 290 started
+2024-11-10 15:46:49,376 - Game 290 ended, Total Reward: 70, Epsilon: 0.01828202812824891
+2024-11-10 15:46:55,029 - Game 291 started
+2024-11-10 15:47:06,589 - Game 291 ended, Total Reward: 70, Epsilon: 0.018190617987607665
+2024-11-10 15:47:11,364 - Game 292 started
+2024-11-10 15:47:22,489 - Game 292 ended, Total Reward: 70, Epsilon: 0.018099664897669628
+2024-11-10 15:47:26,816 - Game 293 started
+2024-11-10 15:47:37,461 - Game 293 ended, Total Reward: 70, Epsilon: 0.01800916657318128
+2024-11-10 15:47:41,848 - Game 294 started
+2024-11-10 15:47:52,760 - Game 294 ended, Total Reward: 70, Epsilon: 0.017919120740315375
+2024-11-10 15:47:57,121 - Game 295 started
+2024-11-10 15:48:07,471 - Game 295 ended, Total Reward: 70, Epsilon: 0.0178295251366138
+2024-11-10 15:48:11,723 - Game 296 started
+2024-11-10 15:48:22,155 - Game 296 ended, Total Reward: 70, Epsilon: 0.01774037751093073
+2024-11-10 15:48:26,233 - Game 297 started
+2024-11-10 15:48:36,708 - Game 297 ended, Total Reward: 70, Epsilon: 0.017651675623376075
+2024-11-10 15:48:40,865 - Game 298 started
+2024-11-10 15:48:53,584 - Game 298 ended, Total Reward: 70, Epsilon: 0.017563417245259196
+2024-11-10 15:48:57,544 - Game 299 started
+2024-11-10 15:49:08,728 - Game 299 ended, Total Reward: 70, Epsilon: 0.0174756001590329
+2024-11-10 15:49:13,001 - Game 300 started
+2024-11-10 15:49:23,858 - Game 300 ended, Total Reward: 70, Epsilon: 0.017388222158237734
+2024-11-10 15:49:28,333 - Game 301 started
+2024-11-10 15:49:39,748 - Game 301 ended, Total Reward: 70, Epsilon: 0.017301281047446545
+2024-11-10 15:49:43,925 - Game 302 started
+2024-11-10 15:49:54,698 - Game 302 ended, Total Reward: 70, Epsilon: 0.017214774642209312
+2024-11-10 15:50:01,061 - Game 303 started
+2024-11-10 15:50:11,815 - Game 303 ended, Total Reward: 70, Epsilon: 0.017128700768998265
+2024-11-10 15:50:16,391 - Game 304 started
+2024-11-10 15:50:27,597 - Game 304 ended, Total Reward: 70, Epsilon: 0.017043057265153275
+2024-11-10 15:50:31,820 - Game 305 started
+2024-11-10 15:50:42,962 - Game 305 ended, Total Reward: 70, Epsilon: 0.01695784197882751
+2024-11-10 15:50:47,400 - Game 306 started
+2024-11-10 15:50:57,705 - Game 306 ended, Total Reward: 70, Epsilon: 0.01687305276893337
+2024-11-10 15:51:01,766 - Game 307 started
+2024-11-10 15:51:24,853 - Game 307 ended, Total Reward: 142, Epsilon: 0.016788687505088704
+2024-11-10 15:51:29,538 - Game 308 started
+2024-11-10 15:51:41,187 - Game 308 ended, Total Reward: 70, Epsilon: 0.01670474406756326
+2024-11-10 15:51:46,182 - Game 309 started
+2024-11-10 15:51:57,793 - Game 309 ended, Total Reward: 70, Epsilon: 0.016621220347225445
+2024-11-10 15:52:02,133 - Game 310 started
+2024-11-10 15:52:15,562 - Game 310 ended, Total Reward: 78, Epsilon: 0.01653811424548932
+2024-11-10 15:52:20,120 - Game 311 started
+2024-11-10 15:52:31,832 - Game 311 ended, Total Reward: 70, Epsilon: 0.016455423674261872
+2024-11-10 15:52:36,506 - Game 312 started
+2024-11-10 15:52:47,236 - Game 312 ended, Total Reward: 70, Epsilon: 0.016373146555890564
+2024-11-10 15:52:51,480 - Game 313 started
+2024-11-10 15:53:02,358 - Game 313 ended, Total Reward: 70, Epsilon: 0.016291280823111112
+2024-11-10 15:53:06,668 - Game 314 started
+2024-11-10 15:53:17,919 - Game 314 ended, Total Reward: 70, Epsilon: 0.016209824418995558
+2024-11-10 15:53:26,633 - Game 315 started
+2024-11-10 15:53:37,192 - Game 315 ended, Total Reward: 70, Epsilon: 0.016128775296900582
+2024-11-10 15:53:41,099 - Game 316 started
+2024-11-10 15:53:51,468 - Game 316 ended, Total Reward: 70, Epsilon: 0.01604813142041608
+2024-11-10 15:53:55,475 - Game 317 started
+2024-11-10 15:54:10,629 - Game 317 ended, Total Reward: 122, Epsilon: 0.015967890763314
+2024-11-10 15:54:14,873 - Game 318 started
+2024-11-10 15:54:26,307 - Game 318 ended, Total Reward: 82, Epsilon: 0.01588805130949743
+2024-11-10 15:54:30,312 - Game 319 started
+2024-11-10 15:54:40,267 - Game 319 ended, Total Reward: 70, Epsilon: 0.015808611052949943
+2024-11-10 15:54:44,351 - Game 320 started
+2024-11-10 15:55:01,036 - Game 320 ended, Total Reward: 130, Epsilon: 0.015729567997685195
+2024-11-10 15:55:04,970 - Game 321 started
+2024-11-10 15:55:15,443 - Game 321 ended, Total Reward: 70, Epsilon: 0.015650920157696768
+2024-11-10 15:55:19,377 - Game 322 started
+2024-11-10 15:55:28,996 - Game 322 ended, Total Reward: 70, Epsilon: 0.015572665556908283
+2024-11-10 15:55:32,919 - Game 323 started
+2024-11-10 15:55:43,214 - Game 323 ended, Total Reward: 70, Epsilon: 0.015494802229123741
+2024-11-10 15:55:47,082 - Game 324 started
+2024-11-10 15:56:02,689 - Game 324 ended, Total Reward: 122, Epsilon: 0.015417328217978123
+2024-11-10 15:56:06,731 - Game 325 started
+2024-11-10 15:56:16,913 - Game 325 ended, Total Reward: 70, Epsilon: 0.015340241576888233
+2024-11-10 15:56:20,686 - Game 326 started
+2024-11-10 15:56:30,799 - Game 326 ended, Total Reward: 70, Epsilon: 0.015263540369003792
+2024-11-10 15:56:34,892 - Game 327 started
+2024-11-10 15:56:46,053 - Game 327 ended, Total Reward: 70, Epsilon: 0.015187222667158773
+2024-11-10 15:56:50,199 - Game 328 started
+2024-11-10 15:57:00,471 - Game 328 ended, Total Reward: 70, Epsilon: 0.015111286553822979
+2024-11-10 15:57:04,553 - Game 329 started
+2024-11-10 15:57:14,389 - Game 329 ended, Total Reward: 70, Epsilon: 0.015035730121053864
+2024-11-10 15:57:18,312 - Game 330 started
+2024-11-10 15:57:28,764 - Game 330 ended, Total Reward: 70, Epsilon: 0.014960551470448594
+2024-11-10 15:57:32,840 - Game 331 started
+2024-11-10 15:57:43,617 - Game 331 ended, Total Reward: 70, Epsilon: 0.014885748713096352
+2024-11-10 15:57:47,457 - Game 332 started
+2024-11-10 15:57:57,958 - Game 332 ended, Total Reward: 70, Epsilon: 0.01481131996953087
+2024-11-10 15:58:01,987 - Game 333 started
+2024-11-10 15:58:11,689 - Game 333 ended, Total Reward: 70, Epsilon: 0.014737263369683217
+2024-11-10 15:58:15,674 - Game 334 started
+2024-11-10 15:58:26,186 - Game 334 ended, Total Reward: 70, Epsilon: 0.014663577052834801
+2024-11-10 15:58:30,297 - Game 335 started
+2024-11-10 15:58:39,724 - Game 335 ended, Total Reward: 70, Epsilon: 0.014590259167570627
+2024-11-10 15:58:43,789 - Game 336 started
+2024-11-10 15:58:54,369 - Game 336 ended, Total Reward: 74, Epsilon: 0.014517307871732775
+2024-11-10 15:58:58,248 - Game 337 started
+2024-11-10 15:59:10,302 - Game 337 ended, Total Reward: 102, Epsilon: 0.014444721332374112
+2024-11-10 15:59:14,389 - Game 338 started
+2024-11-10 15:59:24,698 - Game 338 ended, Total Reward: 70, Epsilon: 0.014372497725712242
+2024-11-10 15:59:28,495 - Game 339 started
+2024-11-10 15:59:40,386 - Game 339 ended, Total Reward: -51, Epsilon: 0.01430063523708368
+2024-11-10 15:59:44,664 - Game 340 started
+2024-11-10 15:59:54,848 - Game 340 ended, Total Reward: 70, Epsilon: 0.01422913206089826
+2024-11-10 15:59:58,622 - Game 341 started
+2024-11-10 16:00:08,678 - Game 341 ended, Total Reward: 70, Epsilon: 0.014157986400593769
+2024-11-10 16:00:12,779 - Game 342 started
+2024-11-10 16:00:26,492 - Game 342 ended, Total Reward: 106, Epsilon: 0.0140871964685908
+2024-11-10 16:00:30,365 - Game 343 started
+2024-11-10 16:00:40,935 - Game 343 ended, Total Reward: 70, Epsilon: 0.014016760486247845
+2024-11-10 16:00:45,107 - Game 344 started
+2024-11-10 16:00:54,763 - Game 344 ended, Total Reward: 70, Epsilon: 0.013946676683816606
+2024-11-10 16:00:58,576 - Game 345 started
+2024-11-10 16:01:08,973 - Game 345 ended, Total Reward: 70, Epsilon: 0.013876943300397522
+2024-11-10 16:01:12,931 - Game 346 started
+2024-11-10 16:01:22,819 - Game 346 ended, Total Reward: 70, Epsilon: 0.013807558583895534
+2024-11-10 16:01:26,609 - Game 347 started
+2024-11-10 16:01:36,883 - Game 347 ended, Total Reward: 70, Epsilon: 0.013738520790976056
+2024-11-10 16:01:40,867 - Game 348 started
+2024-11-10 16:01:56,160 - Game 348 ended, Total Reward: 106, Epsilon: 0.013669828187021177
+2024-11-10 16:02:00,446 - Game 349 started
+2024-11-10 16:02:16,733 - Game 349 ended, Total Reward: 130, Epsilon: 0.01360147904608607
+2024-11-10 16:02:20,525 - Game 350 started
+2024-11-10 16:02:31,158 - Game 350 ended, Total Reward: 70, Epsilon: 0.01353347165085564
+2024-11-10 16:02:35,209 - Game 351 started
+2024-11-10 16:02:44,889 - Game 351 ended, Total Reward: 70, Epsilon: 0.013465804292601361
+2024-11-10 16:02:48,789 - Game 352 started
+2024-11-10 16:03:05,200 - Game 352 ended, Total Reward: 126, Epsilon: 0.013398475271138355
+2024-11-10 16:03:09,096 - Game 353 started
+2024-11-10 16:03:18,879 - Game 353 ended, Total Reward: 70, Epsilon: 0.013331482894782663
+2024-11-10 16:03:23,181 - Game 354 started
+2024-11-10 16:03:33,517 - Game 354 ended, Total Reward: 70, Epsilon: 0.01326482548030875
+2024-11-10 16:03:37,466 - Game 355 started
+2024-11-10 16:03:47,281 - Game 355 ended, Total Reward: 70, Epsilon: 0.013198501352907207
+2024-11-10 16:03:51,556 - Game 356 started
+2024-11-10 16:05:25,180 - Game 356 ended, Total Reward: 106, Epsilon: 0.013132508846142671
+2024-11-10 16:05:28,968 - Game 357 started
+2024-11-10 16:05:39,031 - Game 357 ended, Total Reward: 70, Epsilon: 0.013066846301911957
+2024-11-10 16:05:43,184 - Game 358 started
+2024-11-10 16:05:53,007 - Game 358 ended, Total Reward: 70, Epsilon: 0.013001512070402397
+2024-11-10 16:05:56,686 - Game 359 started
+2024-11-10 16:07:37,145 - Game 359 ended, Total Reward: 70, Epsilon: 0.012936504510050385
+2024-11-10 16:07:41,152 - Game 360 started
+2024-11-10 16:07:50,774 - Game 360 ended, Total Reward: 70, Epsilon: 0.012871821987500134
+2024-11-10 16:07:54,389 - Game 361 started
+2024-11-10 16:08:03,367 - Game 361 ended, Total Reward: 70, Epsilon: 0.012807462877562634
+2024-11-10 16:08:06,947 - Game 362 started
+2024-11-10 16:08:17,088 - Game 362 ended, Total Reward: 70, Epsilon: 0.01274342556317482
+2024-11-10 16:08:21,343 - Game 363 started
+2024-11-10 16:08:31,432 - Game 363 ended, Total Reward: 70, Epsilon: 0.012679708435358946
+2024-11-10 16:08:35,267 - Game 364 started
+2024-11-10 16:08:45,096 - Game 364 ended, Total Reward: 70, Epsilon: 0.012616309893182152
+2024-11-10 16:08:48,795 - Game 365 started
+2024-11-10 16:08:58,465 - Game 365 ended, Total Reward: 70, Epsilon: 0.01255322834371624
+2024-11-10 16:09:02,350 - Game 366 started
+2024-11-10 16:09:13,479 - Game 366 ended, Total Reward: 86, Epsilon: 0.012490462201997659
+2024-11-10 16:09:17,261 - Game 367 started
+2024-11-10 16:09:27,057 - Game 367 ended, Total Reward: 70, Epsilon: 0.012428009890987671
+2024-11-10 16:09:31,073 - Game 368 started
+2024-11-10 16:09:40,656 - Game 368 ended, Total Reward: 70, Epsilon: 0.012365869841532732
+2024-11-10 16:09:44,615 - Game 369 started
+2024-11-10 16:09:54,258 - Game 369 ended, Total Reward: 70, Epsilon: 0.012304040492325068
+2024-11-10 16:09:58,207 - Game 370 started
+2024-11-10 16:10:08,033 - Game 370 ended, Total Reward: 70, Epsilon: 0.012242520289863442
+2024-11-10 16:10:11,978 - Game 371 started
+2024-11-10 16:10:21,680 - Game 371 ended, Total Reward: 70, Epsilon: 0.012181307688414125
+2024-11-10 16:10:25,680 - Game 372 started
+2024-11-10 16:10:35,583 - Game 372 ended, Total Reward: 70, Epsilon: 0.012120401149972055
+2024-11-10 16:10:39,425 - Game 373 started
+2024-11-10 16:10:49,284 - Game 373 ended, Total Reward: 70, Epsilon: 0.012059799144222194
+2024-11-10 16:10:53,274 - Game 374 started
+2024-11-10 16:11:05,836 - Game 374 ended, Total Reward: 72, Epsilon: 0.011999500148501083
+2024-11-10 16:11:09,670 - Game 375 started
+2024-11-10 16:11:19,482 - Game 375 ended, Total Reward: 70, Epsilon: 0.011939502647758577
+2024-11-10 16:11:23,387 - Game 376 started
+2024-11-10 16:11:32,864 - Game 376 ended, Total Reward: 70, Epsilon: 0.011879805134519784
+2024-11-10 16:11:36,715 - Game 377 started
+2024-11-10 16:11:50,567 - Game 377 ended, Total Reward: 110, Epsilon: 0.011820406108847185
+2024-11-10 16:11:54,512 - Game 378 started
+2024-11-10 16:12:05,206 - Game 378 ended, Total Reward: 82, Epsilon: 0.01176130407830295
+2024-11-10 16:12:09,142 - Game 379 started
+2024-11-10 16:12:19,522 - Game 379 ended, Total Reward: 70, Epsilon: 0.011702497557911435
+2024-11-10 16:12:23,513 - Game 380 started
+2024-11-10 16:12:33,769 - Game 380 ended, Total Reward: 70, Epsilon: 0.011643985070121878
+2024-11-10 16:12:37,693 - Game 381 started
+2024-11-10 16:12:47,926 - Game 381 ended, Total Reward: 70, Epsilon: 0.01158576514477127
+2024-11-10 16:12:52,018 - Game 382 started
+2024-11-10 16:13:01,742 - Game 382 ended, Total Reward: 70, Epsilon: 0.011527836319047413
+2024-11-10 16:13:05,589 - Game 383 started
+2024-11-10 16:13:17,226 - Game 383 ended, Total Reward: 86, Epsilon: 0.011470197137452176
+2024-11-10 16:13:21,714 - Game 384 started
+2024-11-10 16:13:31,524 - Game 384 ended, Total Reward: 70, Epsilon: 0.011412846151764916
+2024-11-10 16:13:35,434 - Game 385 started
+2024-11-10 16:13:45,350 - Game 385 ended, Total Reward: 70, Epsilon: 0.011355781921006091
+2024-11-10 16:13:49,278 - Game 386 started
+2024-11-10 16:14:00,371 - Game 386 ended, Total Reward: 86, Epsilon: 0.01129900301140106
+2024-11-10 16:14:04,160 - Game 387 started
+2024-11-10 16:14:19,205 - Game 387 ended, Total Reward: 130, Epsilon: 0.011242507996344055
+2024-11-10 16:14:23,109 - Game 388 started
+2024-11-10 16:14:33,576 - Game 388 ended, Total Reward: 70, Epsilon: 0.011186295456362334
+2024-11-10 16:14:37,541 - Game 389 started
+2024-11-10 16:14:47,217 - Game 389 ended, Total Reward: 70, Epsilon: 0.011130363979080522
+2024-11-10 16:14:51,186 - Game 390 started
+2024-11-10 16:15:01,278 - Game 390 ended, Total Reward: 70, Epsilon: 0.01107471215918512
+2024-11-10 16:15:05,177 - Game 391 started
+2024-11-10 16:15:14,745 - Game 391 ended, Total Reward: 70, Epsilon: 0.011019338598389194
+2024-11-10 16:15:18,570 - Game 392 started
+2024-11-10 16:15:28,413 - Game 392 ended, Total Reward: 70, Epsilon: 0.010964241905397248
+2024-11-10 16:15:32,227 - Game 393 started
+2024-11-10 16:15:42,183 - Game 393 ended, Total Reward: 70, Epsilon: 0.010909420695870262
+2024-11-10 16:15:45,956 - Game 394 started
+2024-11-10 16:15:55,832 - Game 394 ended, Total Reward: 70, Epsilon: 0.01085487359239091
+2024-11-10 16:15:59,687 - Game 395 started
+2024-11-10 16:16:15,942 - Game 395 ended, Total Reward: 130, Epsilon: 0.010800599224428956
+2024-11-10 16:16:19,861 - Game 396 started
+2024-11-10 16:16:29,679 - Game 396 ended, Total Reward: 70, Epsilon: 0.010746596228306812
+2024-11-10 16:16:33,462 - Game 397 started
+2024-11-10 16:16:46,076 - Game 397 ended, Total Reward: 98, Epsilon: 0.010692863247165278
+2024-11-10 16:16:50,126 - Game 398 started
+2024-11-10 16:17:08,315 - Game 398 ended, Total Reward: 199, Epsilon: 0.010639398930929451
+2024-11-10 16:17:12,215 - Game 399 started
+2024-11-10 16:17:21,985 - Game 399 ended, Total Reward: 70, Epsilon: 0.010586201936274804
+2024-11-10 16:17:25,743 - Game 400 started
+2024-11-10 16:17:35,158 - Game 400 ended, Total Reward: 70, Epsilon: 0.01053327092659343
+2024-11-10 16:17:39,053 - Game 401 started
+2024-11-10 16:17:48,739 - Game 401 ended, Total Reward: 70, Epsilon: 0.010480604571960463
+2024-11-10 16:17:52,509 - Game 402 started
+2024-11-10 16:18:02,134 - Game 402 ended, Total Reward: 70, Epsilon: 0.01042820154910066
+2024-11-10 16:18:06,061 - Game 403 started
+2024-11-10 16:18:15,801 - Game 403 ended, Total Reward: 70, Epsilon: 0.010376060541355158
+2024-11-10 16:18:19,603 - Game 404 started
+2024-11-10 16:18:29,168 - Game 404 ended, Total Reward: 70, Epsilon: 0.010324180238648383
+2024-11-10 16:18:33,050 - Game 405 started
+2024-11-10 16:18:43,365 - Game 405 ended, Total Reward: 70, Epsilon: 0.01027255933745514
+2024-11-10 16:18:47,078 - Game 406 started
+2024-11-10 16:18:56,789 - Game 406 ended, Total Reward: 70, Epsilon: 0.010221196540767865
+2024-11-10 16:19:00,620 - Game 407 started
+2024-11-10 16:19:10,091 - Game 407 ended, Total Reward: 70, Epsilon: 0.010170090558064025
+2024-11-10 16:19:13,849 - Game 408 started
+2024-11-10 16:19:23,539 - Game 408 ended, Total Reward: 70, Epsilon: 0.010119240105273705
+2024-11-10 16:19:27,418 - Game 409 started
+2024-11-10 16:19:36,965 - Game 409 ended, Total Reward: 70, Epsilon: 0.010068643904747336
+2024-11-10 16:19:40,851 - Game 410 started
+2024-11-10 16:19:50,772 - Game 410 ended, Total Reward: 70, Epsilon: 0.0100183006852236
+2024-11-10 16:19:55,148 - Game 411 started
+2024-11-10 16:20:04,738 - Game 411 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:20:08,605 - Game 412 started
+2024-11-10 16:20:18,285 - Game 412 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:20:22,166 - Game 413 started
+2024-11-10 16:20:31,602 - Game 413 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:20:35,293 - Game 414 started
+2024-11-10 16:20:44,815 - Game 414 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:20:48,641 - Game 415 started
+2024-11-10 16:20:58,057 - Game 415 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:21:02,017 - Game 416 started
+2024-11-10 16:21:11,793 - Game 416 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:21:15,684 - Game 417 started
+2024-11-10 16:21:25,010 - Game 417 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:21:28,731 - Game 418 started
+2024-11-10 16:21:38,299 - Game 418 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:21:42,090 - Game 419 started
+2024-11-10 16:21:51,564 - Game 419 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:21:55,306 - Game 420 started
+2024-11-10 16:22:04,790 - Game 420 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:22:08,599 - Game 421 started
+2024-11-10 16:22:18,323 - Game 421 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:22:22,018 - Game 422 started
+2024-11-10 16:22:31,441 - Game 422 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:22:35,206 - Game 423 started
+2024-11-10 16:22:44,566 - Game 423 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:22:48,302 - Game 424 started
+2024-11-10 16:22:57,994 - Game 424 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:23:01,790 - Game 425 started
+2024-11-10 16:23:11,825 - Game 425 ended, Total Reward: 72, Epsilon: 0.00996820918179748
+2024-11-10 16:23:15,551 - Game 426 started
+2024-11-10 16:23:25,129 - Game 426 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:23:28,948 - Game 427 started
+2024-11-10 16:23:38,413 - Game 427 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:23:42,282 - Game 428 started
+2024-11-10 16:23:51,798 - Game 428 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:23:55,516 - Game 429 started
+2024-11-10 16:24:04,847 - Game 429 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:24:08,861 - Game 430 started
+2024-11-10 16:24:18,352 - Game 430 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:24:22,178 - Game 431 started
+2024-11-10 16:24:31,574 - Game 431 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:24:35,326 - Game 432 started
+2024-11-10 16:24:44,867 - Game 432 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:24:48,690 - Game 433 started
+2024-11-10 16:24:58,094 - Game 433 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:25:01,848 - Game 434 started
+2024-11-10 16:25:11,344 - Game 434 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:25:15,259 - Game 435 started
+2024-11-10 16:25:24,670 - Game 435 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:25:28,432 - Game 436 started
+2024-11-10 16:25:37,810 - Game 436 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:25:41,606 - Game 437 started
+2024-11-10 16:25:54,207 - Game 437 ended, Total Reward: 98, Epsilon: 0.00996820918179748
+2024-11-10 16:25:58,020 - Game 438 started
+2024-11-10 16:26:07,553 - Game 438 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:26:11,292 - Game 439 started
+2024-11-10 16:26:28,032 - Game 439 ended, Total Reward: 134, Epsilon: 0.00996820918179748
+2024-11-10 16:26:31,799 - Game 440 started
+2024-11-10 16:26:41,112 - Game 440 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:26:44,986 - Game 441 started
+2024-11-10 16:26:54,474 - Game 441 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:26:58,260 - Game 442 started
+2024-11-10 16:27:07,650 - Game 442 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:27:11,409 - Game 443 started
+2024-11-10 16:27:20,850 - Game 443 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:27:24,623 - Game 444 started
+2024-11-10 16:27:34,405 - Game 444 ended, Total Reward: 78, Epsilon: 0.00996820918179748
+2024-11-10 16:27:38,171 - Game 445 started
+2024-11-10 16:27:47,706 - Game 445 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:27:51,555 - Game 446 started
+2024-11-10 16:28:01,140 - Game 446 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:28:04,894 - Game 447 started
+2024-11-10 16:28:14,504 - Game 447 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:28:18,321 - Game 448 started
+2024-11-10 16:28:28,536 - Game 448 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:28:32,335 - Game 449 started
+2024-11-10 16:28:50,798 - Game 449 ended, Total Reward: 130, Epsilon: 0.00996820918179748
+2024-11-10 16:28:55,047 - Game 450 started
+2024-11-10 16:29:05,842 - Game 450 ended, Total Reward: 70, Epsilon: 0.00996820918179748
+2024-11-10 16:29:09,981 - Model saved as /Users/maciejkordecki/Documents/GitHub/ChessProjectDQNA/models/PGN450_trained_model_150.keras
+2024-11-10 16:45:14,170 - Loaded model: models/trained_model_550.keras

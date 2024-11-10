@@ -1,6 +1,8 @@
 import chess
 import numpy as np
 import tensorflow as tf
+physical_devices = tf.config.list_physical_devices('GPU')
+print("Num GPUs Available: ", len(physical_devices))
 from tensorflow.keras.models import Sequential, load_model, save_model
 from tensorflow.keras.layers import Dense, Flatten, Input
 from tensorflow.keras.optimizers import Adam
@@ -19,7 +21,7 @@ MEMORY_SIZE = 100000
 BATCH_SIZE = 64
 EPSILON_DECAY = 0.995
 MIN_EPSILON = 0.01
-EPISODES = 1000  # Number of games to play for training
+EPISODES = 10  # Number of games to play for training
 
 # Register mse as a serializable function
 tf.keras.utils.register_keras_serializable()(mse)
@@ -50,17 +52,25 @@ def encode_board(board):
             encoded[index][piece_map[piece_type]] = 1
     return encoded
 
+def get_most_trained_model(directory='models'):
+    model_files = [f for f in os.listdir(directory) if f.endswith('.keras')]
+    if not model_files:
+        return None
+    model_files.sort(key=lambda f: int(f.split('_')[-1].split('.')[0]), reverse=True)
+    return os.path.join(directory, model_files[0])
+
 class DQNAgent:
     def __init__(self, state_shape, start_games=100):
         self.state_shape = state_shape
         self.start_games = start_games
-        if os.path.exists('models/trained_model.h5'):
-            self.model = load_model('models/trained_model.h5')
+        model_path = get_most_trained_model()
+        if model_path:
+            self.model = load_model(model_path)
             self.model.compile(optimizer=Adam(learning_rate=ALPHA), loss='mse', metrics=['accuracy'])
             self.model.evaluate(np.zeros((1, 64, 12)), np.zeros((1, 1)))  # Ensure metrics are compiled by evaluating the model
         else:
-            self.model = create_model(state_shape)
-        self.target_model = create_model(state_shape)
+            raise ValueError("No trained model found. Please ensure a trained model is available.")
+        self.target_model = self.model
         self.memory = deque(maxlen=MEMORY_SIZE)
         
         # Load epsilon value from file if it exists
@@ -72,10 +82,6 @@ class DQNAgent:
                 
         self.epsilon_min = 0.01  # Minimum epsilon value
         self.epsilon_decay = 0.995  # Decay rate for epsilon
-
-    def create_model(self, state_shape):
-        # Define your model creation logic here
-        pass
 
     def remember(self, state, action, reward, next_state, done):
         self.memory.append((state, action, reward, next_state, done))
