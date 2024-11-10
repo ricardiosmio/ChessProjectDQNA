@@ -5,7 +5,6 @@ import tkinter as tk
 from tkinter import simpledialog
 import chess
 from PIL import Image, ImageTk
-from tensorflow.keras.models import load_model  # Add this import
 from chess_engine import AiEngine  # Import the engine
 import logging
 
@@ -38,19 +37,15 @@ class ChessGUI:
         self.black_button = tk.Button(self.control_frame, text="Play as Black", command=self.play_black)
         self.black_button.pack(side=tk.TOP)
 
-        # Add the new game button
         self.new_game_button = tk.Button(self.control_frame, text="New game", command=self.reset_game)
         self.new_game_button.pack(side=tk.TOP)
 
-        # Add the undo button
         self.undo_button = tk.Button(self.control_frame, text="Undo Move", command=self.undo_move)
         self.undo_button.pack(side=tk.TOP)
 
-        # Add the move suggestion button
         self.suggest_button = tk.Button(self.control_frame, text="Suggest Move", command=self.suggest_move)
         self.suggest_button.pack(side=tk.TOP)
 
-        # Add the play multiple games button
         self.multi_game_button = tk.Button(self.control_frame, text="Play Multiple Games", command=self.play_multiple_games)
         self.multi_game_button.pack(side=tk.TOP)
 
@@ -68,6 +63,9 @@ class ChessGUI:
         self.update_board()
 
         self.board_canvas.bind("<Button-1>", self.on_square_click)
+        
+        # Initialize the AiEngine
+        self.agent = AiEngine(model="models/trained_model_550.keras", board=self.board)
 
     def undo_move(self):
         if self.board.move_stack:
@@ -77,7 +75,7 @@ class ChessGUI:
             self.status_label.config(text="")
 
     def suggest_move(self):
-        suggested_move = self.agent.act(self.board)  # Use the chess engine to suggest a move
+        suggested_move = self.agent.get_move()[0]  # Use the chess engine to suggest a move
         self.status_label.config(text=f"Suggested move: {suggested_move}")
 
         # Highlight the suggested move
@@ -129,7 +127,6 @@ class ChessGUI:
             image = Image.open(f"images/{filename}.png")
             piece_images[piece] = ImageTk.PhotoImage(image.resize((60, 60)))
 
-        # Load the transparent yellow highlight image
         highlight_image = Image.open("images/yellow_transparent.png")
         self.highlight_image = ImageTk.PhotoImage(highlight_image.resize((60, 60)))
         
@@ -163,9 +160,8 @@ class ChessGUI:
             y = (7 - square // 8) * 60 if self.is_white_player else (square // 8) * 60
             color = self.LIGHT_SQUARE_COLOR if (square + square // 8) % 2 == 0 else self.DARK_SQUARE_COLOR
 
-            # Highlight the selected piece and destination square
             if square == highlight_from or square == highlight_to:
-                color = "#FFFF00"  # Highlight color
+                color = "#FFFF00"
 
             self.board_canvas.create_rectangle(x, y, x + 60, y + 60, fill=color)
 
@@ -173,7 +169,6 @@ class ChessGUI:
             x = (square % 8) * 60
             y = (7 - square // 8) * 60 if self.is_white_player else (square // 8) * 60
 
-            # Highlight the last move with the transparent image
             if square == self.highlight_last_move_from or square == self.highlight_last_move_to:
                 self.board_canvas.create_image(x, y, image=self.highlight_image, anchor=tk.NW)
 
@@ -192,7 +187,7 @@ class ChessGUI:
             self.selected_square = square
             self.highlight_moves(square)
         else:
-            piece = self.board.piece_at(self.selected_square)  # Retrieve the piece at the selected square
+            piece = self.board.piece_at(self.selected_square)
             if piece and piece.piece_type == chess.PAWN and (
                 (piece.color == chess.WHITE and chess.square_rank(square) == 7) or 
                 (piece.color == chess.BLACK and chess.square_rank(square) == 0)
@@ -281,7 +276,7 @@ class ChessGUI:
 
     def engine_move(self):
         if not self.board.is_game_over():
-            move = self.agent.act(self.board)
+            move, _, _ = self.agent.get_move()
             self.board.push(move)
             self.highlight_last_move_from = move.from_square
             self.highlight_last_move_to = move.to_square
@@ -290,7 +285,6 @@ class ChessGUI:
             self.check_game_status()
         else:
             self.check_game_status()
-
 
     def play_multiple_games(self):
         num_games = simpledialog.askinteger("Input", "How many games do you want to play?")

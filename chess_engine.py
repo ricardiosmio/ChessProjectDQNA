@@ -109,6 +109,7 @@ class AiEngine(SimpleChessEngine):
             if outcome.winner != self.board.turn: return -9000
         fen = self.board.fen()
         image = self.fen_to_image(fen)
+        image = image.reshape(1, 64, 12)  # Reshape the image to match the model's expected input
         prediction = self.keras_model.predict(image, verbose=0)[0][0]
         evaluation = 100 * inverse_sigmoid(prediction)
         perspective = 1 if self.board.turn == chess.WHITE else -1
