@@ -6,6 +6,8 @@ import keras
 import tensorflow as tf
 
 def inverse_sigmoid(x):
+    if x <= 0 or x >= 1:
+        raise ValueError("Input to inverse_sigmoid must be between 0 and 1 (exclusive).")
     return -1 * math.log((1 / x) - 1)
 
 class SimpleChessEngine():
@@ -14,6 +16,7 @@ class SimpleChessEngine():
         self.depth = depth
         self.recursive_calls = 0
         self.evaluation_type = 'Material'
+        self.transposition_table = {}
 
     def evaluate(self) -> int:
         outcome = self.board.outcome()
@@ -36,8 +39,30 @@ class SimpleChessEngine():
                 points *= -1
             evaluation += points
 
+        # Advanced heuristics
+        evaluation += self.piece_activity_bonus()
+        evaluation += self.center_control_bonus()
+        evaluation += self.king_safety_bonus()
+        evaluation += self.pawn_structure_bonus()
+
         perspective = 1 if self.board.turn == chess.WHITE else -1
         return evaluation * perspective
+
+    def piece_activity_bonus(self) -> int:
+        # Add logic for piece activity bonus
+        return 0
+
+    def center_control_bonus(self) -> int:
+        # Add logic for center control bonus
+        return 0
+
+    def king_safety_bonus(self) -> int:
+        # Add logic for king safety bonus
+        return 0
+
+    def pawn_structure_bonus(self) -> int:
+        # Add logic for pawn structure bonus
+        return 0
 
     def ordered_moves(self) -> list:
         ordered_list = []
@@ -50,15 +75,25 @@ class SimpleChessEngine():
 
     def nega_max_alpha_beta(self, depth, alpha=-1 * sys.maxsize, beta=sys.maxsize):
         self.recursive_calls += 1
-        if depth == 0 or self.ordered_moves() == []: return self.evaluate()
+        board_fen = self.board.fen()
+        if board_fen in self.transposition_table:
+            return self.transposition_table[board_fen]
+
+        if depth == 0 or self.ordered_moves() == []: 
+            evaluation = self.evaluate()
+            self.transposition_table[board_fen] = evaluation
+            return evaluation
+
         for move in self.ordered_moves():
             self.board.push(move)
             score = -1 * self.nega_max_alpha_beta(depth=depth-1, alpha=-1 * beta, beta=-1 * alpha)
             self.board.pop()
             if score >= beta:
+                self.transposition_table[board_fen] = beta
                 return beta
             if score > alpha:
                 alpha = score
+        self.transposition_table[board_fen] = alpha
         return alpha
 
     def get_move(self) -> chess.Move:
@@ -111,6 +146,10 @@ class AiEngine(SimpleChessEngine):
         image = self.fen_to_image(fen)
         image = image.reshape(1, 64, 12)  # Reshape the image to match the model's expected input
         prediction = self.keras_model.predict(image, verbose=0)[0][0]
+
+        # Ensure prediction is within the range (0, 1)
+        prediction = max(1e-7, min(prediction, 1 - 1e-7))
+
         evaluation = 100 * inverse_sigmoid(prediction)
         perspective = 1 if self.board.turn == chess.WHITE else -1
         return evaluation * perspective
@@ -137,6 +176,10 @@ class TFLiteEngine(AiEngine):
         self.interpreter.set_tensor(self.input_index, input_data)
         self.interpreter.invoke()
         prediction = self.interpreter.get_tensor(self.output_index)
+
+        # Ensure prediction is within the range (0, 1)
+        prediction = max(1e-7, min(prediction, 1 - 1e-7))
+
         evaluation = 100 * inverse_sigmoid(prediction)
         perspective = 1 if self.board.turn == chess.WHITE else -1
         return evaluation * perspective
